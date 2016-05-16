@@ -19,11 +19,16 @@
 
 package secretproject;
 
+import static secretproject.resources.Data.*;
+
 public class Launcher {
 
     public static void main(String[] args) {
         System.out.println("So, you've encontered this random program.");
         System.out.println("Well, you've better have good reason to be here.");
+        if(sc.nextLine().equalsIgnoreCase("TEST")){
+            System.out.println("You typed test. Why?");
+        }
     }
     
 }
