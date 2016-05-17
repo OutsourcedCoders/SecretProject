@@ -17,7 +17,7 @@
  * along with SecretProject.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package secretProject.Resourcess;
+package secretprojectt.resources;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -30,4 +30,7 @@ public class Data {
     public static boolean gameEnded = false;
     
     public static String userInput;
+    
+    public static int land1 = 0;
+    public static int land2 = 0;
 }
