@@ -26,8 +26,16 @@ public class Launcher {
     public static void main(String[] args) {
         System.out.println("So, you've encontered this random program.");
         System.out.println("Well, you've better have good reason to be here.");
-        if(sc.nextLine().equalsIgnoreCase("TEST")){
-            System.out.println("You typed test. Why?");
+        System.out.println("Want to start?");
+        while(!userAnswered){
+            userInput = sc.nextLine();
+            switch(userInput.toUpperCase()){
+                case "YES":
+                    System.out.println("Alright.");
+                    break;
+                case "NO":
+                    System.out.println("Whelp,");
+            }
         }
     }
     
