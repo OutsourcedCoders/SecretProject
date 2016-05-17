@@ -68,7 +68,38 @@ public class PlayerCreation {
                 break;
         }
         if(playerGender == 1){
-            
+            switch (playerClothes){
+                case 0:
+                    playerClothesC = "green skirt with light green blouse";
+                    break;
+                case 1:
+                    playerClothesC = "long red shirt with black leggings";
+                    break;
+                case 2:
+                    playerClothesC = "<placeholder>";
+                    break;
+                case 3:
+                    playerClothesC = "<placeholder>";
+                    break;
+                case 4:
+                    playerClothesC = "<placeholder>";
+                    break;
+                case 5:
+                    playerClothesC = "<placeholder>";
+                    break;
+                case 6:
+                    playerClothesC = "<placeholder>";
+                    break;
+                case 7:
+                    playerClothesC = "<placeholder>";
+                    break;
+                case 8:
+                    playerClothesC = "<placeholder>";
+                    break;
+                case 9:
+                    playerClothesC = "<placeholder>";
+                    break;
+            }
         }else if (playerGender == 0){
             switch (playerClothes){
                 case 0:
