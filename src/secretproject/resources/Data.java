@@ -17,7 +17,7 @@
  * along with SecretProject.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package secretprojectt.resources;
+package secretproject.resources;
 
 import java.util.Scanner;
 import java.util.Random;

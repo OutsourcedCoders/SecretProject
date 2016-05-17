@@ -17,9 +17,9 @@
  * along with SecretProject.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package secretprojectt.lands;
+package secretproject.lands;
 
-import static secretprojectt.resources.Data.*;
+import static secretproject.resources.Data.*;
 
 public class LandMain {
     public void LandDesc(){

@@ -17,9 +17,9 @@
  * along with SecretProject.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package secretprojectt.data;
+package secretproject;
 
-import static secretprojectt.resources.Data.*;
+import static secretproject.resources.Data.*;
 
 public class Launcher {
 
