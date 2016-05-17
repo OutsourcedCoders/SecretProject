@@ -28,9 +28,19 @@ public class Data {
     
     public static boolean userAnswered = false;
     public static boolean gameEnded = false;
+    public static boolean randomChar = false;
     
     public static String userInput;
+    public static String land1S = "NULL";
+    public static String land2S = "NULL";
+    public static String playerGenderC = "NULL";
+    public static String playerHairC = "NULL";
+    public static String playerClothesC = "NULL";
     
     public static int land1 = 0;
     public static int land2 = 0;
+    public static int playerGender;
+    public static int playerHair;
+    public static int playerClothes;
+    
 }

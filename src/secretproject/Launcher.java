@@ -26,7 +26,7 @@ public class Launcher {
     public static void main(String[] args) {
         System.out.println("So, you've encontered this random program.");
         System.out.println("Well, you've better have good reason to be here.");
-        System.out.print("Want to start?");
+        System.out.print("Want to start?\n:");
         while(!userAnswered){
             userInput = sc.nextLine();
             switch(userInput.toUpperCase()){
@@ -37,8 +37,25 @@ public class Launcher {
                     System.out.println("Whelp, goodbye then.");
                     return;
             }
-            while(!gameEnded){
-                //some shit needs to be written here
+            System.out.print("Random character or custom?\n:");
+            userInput = sc.nextLine();
+            switch(userInput.toUpperCase()){
+                case "RANDOM CHARACTER":
+                    System.out.println("Have fun *wonk*");
+                    randomChar = true;
+                    break;
+                case "CUSTOM CHARACTER":
+                    System.out.println("Great, lets get started!");
+                    break;
+                default:
+                    System.out.println("Please choose \'Random Character\' or");
+                    System.out.println("\'Custom Character\'.");
+                    System.out.println("Not case sensitive.");
+            }
+            if(randomChar){
+                
+            }else{
+                
             }
         }
     }

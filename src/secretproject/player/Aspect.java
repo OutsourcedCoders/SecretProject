@@ -17,22 +17,12 @@
  * along with SecretProject.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package secretproject.lands;
+package secretproject.player;
 
 import static secretproject.resources.Data.*;
 
-public class LandMain {
-    public void LandDesc(){
-        switch(land1){
-            
-        }
-        switch(land2){
-            
-        }
-    }
-    public void landRandomize(){
-//        if(/**/){
-//            
-//        }
+public class Aspect {
+    public void aspectGen(){
+        
     }
 }
