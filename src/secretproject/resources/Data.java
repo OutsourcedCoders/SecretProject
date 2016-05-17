@@ -25,6 +25,9 @@ import java.util.Random;
 public class Data {
     public static Scanner sc = new Scanner(System.in);
     public static Random rng = new Random();
+    
     public static boolean userAnswered = false;
+    public static boolean gameEnded = false;
+    
     public static String userInput;
 }

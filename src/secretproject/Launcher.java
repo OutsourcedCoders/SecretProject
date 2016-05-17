@@ -26,7 +26,7 @@ public class Launcher {
     public static void main(String[] args) {
         System.out.println("So, you've encontered this random program.");
         System.out.println("Well, you've better have good reason to be here.");
-        System.out.println("Want to start?");
+        System.out.print("Want to start?");
         while(!userAnswered){
             userInput = sc.nextLine();
             switch(userInput.toUpperCase()){
@@ -34,7 +34,11 @@ public class Launcher {
                     System.out.println("Alright.");
                     break;
                 case "NO":
-                    System.out.println("Whelp,");
+                    System.out.println("Whelp, goodbye then.");
+                    return;
+            }
+            while(!gameEnded){
+                //some shit needs to be written here
             }
         }
     }
