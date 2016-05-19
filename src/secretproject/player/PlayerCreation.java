@@ -22,7 +22,7 @@ package secretproject.player;
 import static secretproject.resources.Data.*;
 
 public class PlayerCreation {
-    public void RandomChar(){
+    public static void RandomChar(){
         playerGender = rng.nextInt(1);
         playerHair = rng.nextInt(9);
         playerClothes = rng.nextInt(9);
@@ -106,34 +106,37 @@ public class PlayerCreation {
                     playerClothesC = "jeans with t-shirt";
                     break;
                 case 1:
-                    playerClothesC = "";
+                    playerClothesC = "<placeholder>";
                     break;
                 case 2:
-                    playerClothesC = "mohawk";
+                    playerClothesC = "<placeholder>";
                     break;
                 case 3:
-                    playerClothesC = "bedhead";
+                    playerClothesC = "<placeholder>";
                     break;
                 case 4:
-                    playerClothesC = "cropped";
+                    playerClothesC = "<placeholder>";
                     break;
                 case 5:
-                    playerClothesC = "millitary";
+                    playerClothesC = "<placeholder>";
                     break;
                 case 6:
-                    playerClothesC = "long";
+                    playerClothesC = "<placeholder>";
                     break;
                 case 7:
-                    playerClothesC = "short";
+                    playerClothesC = "<placeholder>";
                     break;
                 case 8:
-                    playerClothesC = "unsettled";
+                    playerClothesC = "<placeholder>";
                     break;
                 case 9:
-                    playerClothesC = "standing up";
+                    playerClothesC = "<placeholder>";
                     break;
             }
         }
-        
+        System.out.println("Random player generated.");
+        System.out.println("Gender  = " + playerGenderC);
+        System.out.println("Hair    = " + playerHairC);
+        System.out.println("Clothes = " + playerClothesC);
     }
 }

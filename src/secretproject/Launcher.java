@@ -24,9 +24,11 @@ import static secretproject.resources.Data.*;
 public class Launcher {
 
     public static void main(String[] args) {
-        System.out.println("So, you've encontered this random program.");
-        System.out.println("Well, you've better have good reason to be here.");
-        System.out.print("Want to start?\n:");
+        System.out.println("SBURB version 0.0.1\n");
+        System.out.println("SKIANET SYSTEMS INCORPORATED. ALL RIGHTS RESERVED.\n");
+        System.out.println("SBURB client is running.\n");
+        System.out.println("Start? Type yes or no, press [ENTER] when ready.\n");
+        System.out.print("\n>");
         while(!userAnswered){
             userInput = sc.nextLine();
             switch(userInput.toUpperCase()){
@@ -40,23 +42,27 @@ public class Launcher {
             System.out.print("Random character or custom?\n:");
             userInput = sc.nextLine();
             switch(userInput.toUpperCase()){
-                case "RANDOM CHARACTER":
-                    System.out.println("Have fun *wonk*");
+                case "RANDOM":
+                    System.out.println("Have fun *wonk*\n");
                     randomChar = true;
+                    userAnswered = true;
                     break;
-                case "CUSTOM CHARACTER":
+                case "CUSTOM":
                     System.out.println("Great, lets get started!");
                     break;
                 default:
-                    System.out.println("Please choose \'Random Character\' or");
-                    System.out.println("\'Custom Character\'.");
+                    System.out.println("Please choose \'Random\' or");
+                    System.out.println("\'Custom\'.");
                     System.out.println("Not case sensitive.");
             }
             if(randomChar){
-                
+                secretproject.player.PlayerCreation.RandomChar();
             }else{
-                
+                System.out.println("Not done yet.");
+                System.out.println("¯\\_(ツ)_/¯");
+                return;
             }
+            
         }
     }
     

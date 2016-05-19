@@ -22,7 +22,51 @@ package secretproject.player;
 import static secretproject.resources.Data.*;
 
 public class Aspect {
-    public void aspectGen(){
+    public void classpectGen(){
+        playerClass = rng.nextInt(6);
+        playerAspect = rng.nextInt(11);
+        if(playerGender == 1){
+            switch(playerClass){
+                case 0:
+                    playerClassC = "Rogue";
+                    break;
+                case 1:
+                    playerClassC = "Heir";
+                    break;
+                case 2:
+                    playerClassC = "Thief";
+                    break;
+                case 3:
+                    playerClassC = "Rogue";
+                    break;
+                case 4:
+                    playerClassC = "Rogue";
+                    break;
+                case 5:
+                    playerClassC = "Rogue";
+                    break;
+                case 6:
+                    playerClassC = "Rogue";
+                    break;
+            }
+        }else{
+            switch(playerClass){
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+            }
+        }
         
     }
 }

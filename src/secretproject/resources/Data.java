@@ -21,26 +21,34 @@ package secretproject.resources;
 
 import java.util.Scanner;
 import java.util.Random;
+import java.text.DecimalFormat;
 
 public class Data {
     public static Scanner sc = new Scanner(System.in);
     public static Random rng = new Random();
+    public static DecimalFormat dc = new DecimalFormat();
     
     public static boolean userAnswered = false;
     public static boolean gameEnded = false;
     public static boolean randomChar = false;
     
     public static String userInput;
-    public static String land1S = "NULL";
-    public static String land2S = "NULL";
-    public static String playerGenderC = "NULL";
-    public static String playerHairC = "NULL";
+    public static String land1C = "NULL";
+    public static String land2C = "NULL";
+    
+    public static String playerGenderC  = "NULL";
+    public static String playerHairC    = "NULL";
     public static String playerClothesC = "NULL";
+    public static String playerClassC   = "NULL";
+    public static String playerAspectC  = "NULL";
     
     public static int land1 = 0;
     public static int land2 = 0;
     public static int playerGender;
     public static int playerHair;
     public static int playerClothes;
+    public static int playerClass;
+    public static int playerAspect;
+    
     
 }
