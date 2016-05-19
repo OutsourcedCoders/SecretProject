@@ -28,10 +28,10 @@ public class PlayerCreation {
         playerClothes = rng.nextInt(9);
         switch(playerGender){
             case 0:
-                playerGenderC = "male";
+                playerGenderC = "Male";
                 break;
             case 1:
-                playerGenderC = "female";
+                playerGenderC = "Female";
                 break;
         }
         
@@ -134,7 +134,8 @@ public class PlayerCreation {
                     break;
             }
         }
-        System.out.println("Random player generated.");
+        System.out.println("RANDOM PLAYER generated.\n");
+        System.out.println("RANDOM PLAYER loaded.\n");
         System.out.println("Gender  = " + playerGenderC);
         System.out.println("Hair    = " + playerHairC);
         System.out.println("Clothes = " + playerClothesC);

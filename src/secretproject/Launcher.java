@@ -18,48 +18,47 @@
  */
 
 package secretproject;
-//boop
 
 import static secretproject.resources.Data.*;
 
 public class Launcher {
 
     public static void main(String[] args) {
-        System.out.println("SBURB version 0.0.1\n");
+        System.out.println("SBURB version 0.0.0.1\n");
         System.out.println("SKIANET SYSTEMS INCORPORATED. ALL RIGHTS RESERVED.\n");
         System.out.println("SBURB client is running.\n");
         System.out.println("Start? Type yes or no, press [ENTER] when ready.\n");
-        System.out.print("\n>");
+        System.out.print(">");
         while(!userAnswered){
             userInput = sc.nextLine();
             switch(userInput.toUpperCase()){
                 case "YES":
-                    System.out.println("Alright.");
+                    System.out.println("SBURB character creation is running.\n");
                     break;
                 case "NO":
-                    System.out.println("Whelp, goodbye then.");
+                    System.out.println("PROGRAM TERMINATING.\n");
                     return;
             }
-            System.out.print("Random character or custom?\n:");
+            System.out.print("RANDOM or CUSTOM?\n>");
             userInput = sc.nextLine();
             switch(userInput.toUpperCase()){
                 case "RANDOM":
-                    System.out.println("Have fun *wonk*\n");
+                    System.out.println("RANDOM GEN CHOSEN\n");
                     randomChar = true;
                     userAnswered = true;
                     break;
                 case "CUSTOM":
-                    System.out.println("Great, lets get started!");
+                    System.out.println("CUSTOM NOT FUNCTIONAL");
                     break;
                 default:
-                    System.out.println("Please choose \'Random\' or");
-                    System.out.println("\'Custom\'.");
-                    System.out.println("Not case sensitive.");
+                    System.out.println("Choose \'RANDOM\' or");
+                    System.out.println("\'CUSTOM\'.");
             }
             if(randomChar){
                 secretproject.player.PlayerCreation.RandomChar();
+                secretproject.player.Aspect.classpectGen();
             }else{
-                System.out.println("Not done yet.");
+                System.out.println("UNFINISHED.");
                 System.out.println("¯\\_(ツ)_/¯");
                 return;
             }
