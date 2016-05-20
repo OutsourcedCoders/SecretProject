@@ -31,6 +31,7 @@ public class Data {
     public static boolean userAnswered = false;
     public static boolean gameEnded = false;
     public static boolean randomChar = false;
+    public static boolean playerCreated = false;
     
     public static String userInput;
     public static String land1C = "NULL";

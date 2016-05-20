@@ -27,18 +27,10 @@ public class Launcher {
         System.out.println("SBURB version 0.0.0.1\n");
         System.out.println("SKIANET SYSTEMS INCORPORATED. ALL RIGHTS RESERVED.\n");
         System.out.println("SBURB client is running.\n");
-        System.out.println("Start? Type yes or no, press [ENTER] when ready.\n");
+        System.out.println("Press [ENTER] when ready.\n");
         System.out.print(">");
-        while(!userAnswered){
+        while(!playerCreated){
             userInput = sc.nextLine();
-            switch(userInput.toUpperCase()){
-                case "YES":
-                    System.out.println("SBURB character creation is running.\n");
-                    break;
-                case "NO":
-                    System.out.println("PROGRAM TERMINATING.\n");
-                    return;
-            }
             System.out.print("RANDOM or CUSTOM?\n>");
             userInput = sc.nextLine();
             switch(userInput.toUpperCase()){
@@ -56,14 +48,14 @@ public class Launcher {
             }
             if(randomChar){
                 secretproject.player.PlayerCreation.RandomChar();
-                secretproject.player.Aspect.classpectGen();
+                secretproject.player.PlayerCreation.classpectGen();
+                playerCreated = true;
             }else{
                 System.out.println("UNFINISHED.");
                 System.out.println("¯\\_(ツ)_/¯");
                 return;
-            }
-            
+            } 
         }
+        System.out.println("Exit SBURB client.");
     }
-    
 }
