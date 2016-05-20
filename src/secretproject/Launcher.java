@@ -28,7 +28,8 @@ public class Launcher {
         System.out.println("SBURB version 0.0.0.1\n");
         System.out.println("SKIANET SYSTEMS INCORPORATED. ALL RIGHTS RESERVED.\n");
         System.out.println("SBURB client is running.\n");
-        System.out.println("Start? Type yes or no, press [ENTER] when ready.\n");
+
+        System.out.println("Press [ENTER] when ready.\n");
         System.out.print("> ");
         while(!userAnswered){
             userInput = sc.nextLine();
@@ -59,14 +60,14 @@ public class Launcher {
             if(randomChar){
                 secretproject.resources.Data.ClearScreen();
                 secretproject.player.PlayerCreation.RandomChar();
-                secretproject.player.Aspect.classpectGen();
+                secretproject.player.PlayerCreation.classpectGen();
+                playerCreated = true;
             }else{
                 System.out.println("UNFINISHED.");
                 System.out.println("¯\\_(ツ)_/¯");
                 return;
-            }
-            
+            } 
         }
+        System.out.println("Exit SBURB client.");
     }
-    
 }
