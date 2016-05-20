@@ -19,9 +19,13 @@
 
 package secretproject.resources;
 
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
 import java.text.DecimalFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import secretproject.Launcher;
 
 public class Data {
     public static Scanner sc = new Scanner(System.in);
@@ -50,5 +54,13 @@ public class Data {
     public static int playerClass;
     public static int playerAspect;
     
-    
+    public static void ClearScreen(){
+        try {
+            secretproject.resources.CLS.main();
+        } catch (IOException ex) {
+            Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
