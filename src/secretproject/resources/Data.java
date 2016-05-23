@@ -55,12 +55,12 @@ public class Data {
     public static int playerClass;
     public static int playerAspect;
     
+    
+    //clearscreen lovingly explained by people on the internet
     public static void ClearScreen(){
         try {
             secretproject.resources.CLS.main();
-        } catch (IOException ex) {
-            Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InterruptedException ex) {
+        } catch (IOException | InterruptedException ex) {
             Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
