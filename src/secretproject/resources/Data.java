@@ -59,7 +59,7 @@ public class Data {
     //clearscreen lovingly explained by people on the internet
     public static void ClearScreen(){
         try {
-            secretproject.resources.CLS.main();
+            secretproject.resources.WindowsCommands.CLS();
         } catch (IOException | InterruptedException ex) {
             Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
         }
