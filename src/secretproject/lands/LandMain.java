@@ -31,8 +31,8 @@ public class LandMain {
         }
     }
     public void landRandomize(){
-//        if(/**/){
-//            
-//        }
+        switch(playerAspect){
+            
+        }
     }
 }
