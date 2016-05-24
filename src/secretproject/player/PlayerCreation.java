@@ -52,7 +52,7 @@ public class PlayerCreation {
                 playerHairC = "cropped";
                 break;
             case 5:
-                playerHairC = "millitary";
+                playerHairC = "military";
                 break;
             case 6:
                 playerHairC = "long";
