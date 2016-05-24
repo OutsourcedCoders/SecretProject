@@ -31,8 +31,57 @@ public class LandMain {
         }
     }
     public void landRandomize(){
-        switch(playerAspect){
-            
+        switch(playerAspectC.toUpperCase()){
+            case "TIME":
+                break;
+            case "SPACE":
+                break;
+            case "VOID":
+                break;
+            case "LIGHT":
+                break;
+            case "MIND":
+                break;
+            case "HEART":
+                break;
+            case "RAGE":
+                break;
+            case "HOPE":
+                break;
+            case "DOOM":
+                break;
+            case "LIFE":
+                break;
+            case "BLOOD":
+                break;
+            case "BREATH":
+                break;
+        }
+        switch(playerClassC.toUpperCase()){
+            case "ROGUE":
+                break;
+            case "THIEF":
+                break;
+            case "HEIR":
+                break;
+            case "MAID":
+                break;
+            case "PAGE":
+                break;
+            case "KNIGHT":
+                break;
+            case "SEER":
+                break;
+            case "MAGE":
+                break;
+            case "SYLPH":
+                break;
+            case "WITCH":
+                break;
+            case "BARD":
+                break;
+            case "PRINCE":
+                break;
         }
     }
 }
