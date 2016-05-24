@@ -19,9 +19,13 @@
 
 package secretproject.resources;
 
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
 import java.text.DecimalFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import secretproject.Launcher;
 
 public class Data {
     public static Scanner sc = new Scanner(System.in);
@@ -31,6 +35,7 @@ public class Data {
     public static boolean userAnswered = false;
     public static boolean gameEnded = false;
     public static boolean randomChar = false;
+    public static boolean playerCreated = false;
     
     public static String userInput;
     public static String land1C = "NULL";
@@ -51,4 +56,12 @@ public class Data {
     public static int playerAspect;
     
     
+    //clearscreen lovingly explained by people on the internet
+    public static void ClearScreen(){
+        try {
+            secretproject.resources.CLS.main();
+        } catch (IOException | InterruptedException ex) {
+            Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

@@ -17,25 +17,12 @@
  * along with SecretProject.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package secretproject.player;
+package secretproject.resources;
 
-import static secretproject.resources.Data.*;
+import java.io.IOException;
 
-/*
- Classes possible.
- Rogue  F M
- Thief  F M
- Heir   F M
- Maid   F
- Page     M
- Knight F M
- Seer   F M
- Mage   F M
- Sylph  F
- Witch  F
- Bard     M
- Prince   M
- */
-public class Aspect {
-    
+public class CLS {
+    public static void main(String... arg) throws IOException, InterruptedException {
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+    }
 }
