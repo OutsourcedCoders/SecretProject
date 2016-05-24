@@ -31,32 +31,6 @@ public class LandMain {
         }
     }
     public void landRandomize(){
-        switch(playerAspectC.toUpperCase()){
-            case "TIME":
-                break;
-            case "SPACE":
-                break;
-            case "VOID":
-                break;
-            case "LIGHT":
-                break;
-            case "MIND":
-                break;
-            case "HEART":
-                break;
-            case "RAGE":
-                break;
-            case "HOPE":
-                break;
-            case "DOOM":
-                break;
-            case "LIFE":
-                break;
-            case "BLOOD":
-                break;
-            case "BREATH":
-                break;
-        }
         switch(playerClassC.toUpperCase()){
             case "ROGUE":
                 break;
@@ -81,6 +55,58 @@ public class LandMain {
             case "BARD":
                 break;
             case "PRINCE":
+                break;
+        }
+        /*
+         Time planets possible   :
+            Clockwork 
+         Space planets possible  :
+         
+         Void planets possible   :
+         
+         Light planets possible  :
+         
+         Mind planets possible   :
+         
+         Heart planets possible  :
+         
+         Rage planets possible   :
+         
+         Hope planets possible   :
+         
+         Doom planets possible   :
+         
+         Life planets possible   :
+         
+         Blood planets possible  :
+         
+         Breath planets possible :
+        
+        */
+        switch(playerAspectC.toUpperCase()){
+            case "TIME":
+                break;
+            case "SPACE":
+                break;
+            case "VOID":
+                break;
+            case "LIGHT":
+                break;
+            case "MIND":
+                break;
+            case "HEART":
+                break;
+            case "RAGE":
+                break;
+            case "HOPE":
+                break;
+            case "DOOM":
+                break;
+            case "LIFE":
+                break;
+            case "BLOOD":
+                break;
+            case "BREATH":
                 break;
         }
     }
