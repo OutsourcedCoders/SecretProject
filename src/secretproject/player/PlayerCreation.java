@@ -198,7 +198,7 @@ public class PlayerCreation {
                     playerClassC = "Thief";
                     break;
                 case 2:
-                    playerClassC = "Hier";
+                    playerClassC = "Heir";
                     break;
                 case 3:
                     playerClassC = "Page";
