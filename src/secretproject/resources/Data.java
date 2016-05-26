@@ -29,7 +29,7 @@ import secretproject.Launcher;
 
 public class Data {
     public static Scanner sc = new Scanner(System.in);
-    public static Random rng = new Random();
+    public static Random rnGsus = new Random();
     public static DecimalFormat dc = new DecimalFormat();
     
     public static boolean userAnswered = false;

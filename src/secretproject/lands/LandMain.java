@@ -32,6 +32,7 @@ public class LandMain {
     }
     
     public void landGen(){
+        landRand = rnGsus.nextInt();
         /*
          Rogue planets possible  :
             

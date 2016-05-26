@@ -23,9 +23,9 @@ import static secretproject.resources.Data.*;
 
 public class PlayerCreation {
     public static void RandomChar(){
-        playerGender = rng.nextBoolean();
-        playerHair = rng.nextInt(9);
-        playerClothes = rng.nextInt(9);
+        playerGender = rnGsus.nextBoolean();
+        playerHair = rnGsus.nextInt(10);
+        playerClothes = rnGsus.nextInt(10);
         if(!playerGender){
             playerGenderC = "male";
         }else{
@@ -73,19 +73,19 @@ public class PlayerCreation {
                     playerClothesC = "zipped hoodie with jeans";
                     break;
                 case 2:
-                    playerClothesC = "";
+                    playerClothesC = "SBurb shirt with jeans";
                     break;
                 case 3:
-                    playerClothesC = "<placeholder>";
+                    playerClothesC = "white t-shirt with shorts";
                     break;
                 case 4:
-                    playerClothesC = "<placeholder>";
+                    playerClothesC = "cargo pants with long sleeve shirt";
                     break;
                 case 5:
-                    playerClothesC = "<placeholder>";
+                    playerClothesC = "leather trenchcoat";
                     break;
                 case 6:
-                    playerClothesC = "<placeholder>";
+                    playerClothesC = "labcoat with pants";
                     break;
                 case 7:
                     playerClothesC = "<placeholder>";
@@ -106,7 +106,7 @@ public class PlayerCreation {
                     playerClothesC = "long red skirt with black leggings";
                     break;
                 case 2:
-                    playerClothesC = "fancy labcoat";
+                    playerClothesC = "labcoat with leggings";
                     break;
                 case 3:
                     playerClothesC = "ripped jeans with purple blouse";
@@ -115,13 +115,13 @@ public class PlayerCreation {
                     playerClothesC = "atom t-shirt with long skirt";
                     break;
                 case 5:
-                    playerClothesC = "<placeholder>";
+                    playerClothesC = "purple skirt with jacket";
                     break;
                 case 6:
-                    playerClothesC = "<placeholder>";
+                    playerClothesC = "SBurb shirt with jeans";
                     break;
                 case 7:
-                    playerClothesC = "<placeholder>";
+                    playerClothesC = "";
                     break;
                 case 8:
                     playerClothesC = "<placeholder>";
@@ -140,8 +140,8 @@ public class PlayerCreation {
     }
     
     public static void classpectGen(){
-        playerClass = rng.nextInt(8);
-        playerAspect = rng.nextInt(11);
+        playerClass = rnGsus.nextInt(9);//returns number from 0-8
+        playerAspect = rnGsus.nextInt(12);//returnss number from 0-11
         /*
          Classes possible.
          Rogue  F M
