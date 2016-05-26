@@ -50,6 +50,7 @@ public class Data {
     
     public static int land1 = 0;
     public static int land2 = 0;
+    public static int landRand;
     
     public static int playerHair;
     public static int playerClothes;

@@ -32,7 +32,7 @@ public class LandMain {
     }
     
     public void landGen(){
-        landRand = rnGsus.nextInt();
+        landRand = rnGsus.nextInt(4);
         /*
          Rogue planets possible  :
             
@@ -91,7 +91,7 @@ public class LandMain {
          Space planets possible  :
             Frogs (ALWAYS HAVE TO BE STOKERS OF THE FORGE)
          Void planets possible   :
-            Silence Nothingness Holes Caves
+            Silence Nothing Holes Caves
          Light planets possible  :
             Colors Rainbows Rain 
          Mind planets possible   :
@@ -113,28 +113,183 @@ public class LandMain {
         */
         switch(playerAspectC.toUpperCase()){
             case "TIME":
+                switch(landRand){
+                    case 0:
+                        land2C = "Clockwork";
+                        break;
+                    case 1:
+                        land2C = "Melody";
+                        break;
+                    case 2:
+                        land2C = "Music";
+                        break;
+                    case 3:
+                        land2C = "";
+                        break;
+                }
                 break;
             case "SPACE":
+                land2C = "Frogs";
                 break;
             case "VOID":
+                switch(landRand){
+                    case 0:
+                        land2C = "Silence";
+                        break;
+                    case 1:
+                        land2C = "Nothing";
+                        break;
+                    case 2:
+                        land2C = "Holes";
+                        break;
+                    case 3:
+                        land2C = "Caves";
+                        break;
+                }
                 break;
             case "LIGHT":
+                switch(landRand){
+                    case 0:
+                        land2C = "Colors";
+                        break;
+                    case 1:
+                        land2C = "Rainbows";
+                        break;
+                    case 2:
+                        land2C = "Rain";
+                        break;
+                    case 3:
+                        land2C = "";
+                        break;
+                }
                 break;
             case "MIND":
+                switch(landRand){
+                    case 0:
+                        land2C = "Flow";
+                        break;
+                    case 1:
+                        land2C = "Dreams";
+                        break;
+                    case 2:
+                        land2C = "Fears";
+                        break;
+                    case 3:
+                        land2C = "";
+                        break;
+                }
                 break;
             case "HEART":
+                switch(landRand){
+                    case 0:
+                        land2C = "Souls";
+                        break;
+                    case 1:
+                        land2C = "Refugees";
+                        break;
+                    case 2:
+                        land2C = "";
+                        break;
+                    case 3:
+                        land2C = "";
+                        break;
+                }
                 break;
             case "RAGE":
+                switch(landRand){
+                    case 0:
+                        land2C = "Clowns";
+                        break;
+                    case 1:
+                        land2C = "Destruction";
+                        break;
+                    case 2:
+                        land2C = "Craziness";
+                        break;
+                    case 3:
+                        land2C = "";
+                        break;
+                }
                 break;
             case "HOPE":
+                switch(landRand){
+                    case 0:
+                        land2C = "Angels";
+                        break;
+                    case 1:
+                        land2C = "Bells";
+                        break;
+                    case 2:
+                        land2C = "Flowers";
+                        break;
+                    case 3:
+                        land2C = "Fields";
+                        break;
+                }
                 break;
             case "DOOM":
+                switch(landRand){
+                    case 0:
+                        land2C = "";
+                        break;
+                    case 1:
+                        land2C = "";
+                        break;
+                    case 2:
+                        land2C = "";
+                        break;
+                    case 3:
+                        land2C = "";
+                        break;
+                }
                 break;
             case "LIFE":
+                switch(landRand){
+                    case 0:
+                        land2C = "";
+                        break;
+                    case 1:
+                        land2C = "";
+                        break;
+                    case 2:
+                        land2C = "";
+                        break;
+                    case 3:
+                        land2C = "";
+                        break;
+                }
                 break;
             case "BLOOD":
+                switch(landRand){
+                    case 0:
+                        land2C = "";
+                        break;
+                    case 1:
+                        land2C = "";
+                        break;
+                    case 2:
+                        land2C = "";
+                        break;
+                    case 3:
+                        land2C = "";
+                        break;
+                }
                 break;
             case "BREATH":
+                switch(landRand){
+                    case 0:
+                        land2C = "";
+                        break;
+                    case 1:
+                        land2C = "";
+                        break;
+                    case 2:
+                        land2C = "";
+                        break;
+                    case 3:
+                        land2C = "";
+                        break;
+                }
                 break;
         }
     }
