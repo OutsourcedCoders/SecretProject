@@ -87,19 +87,19 @@ public class LandMain {
         }
         /*
          Time planets possible   :
-            Clockwork Melody Music 
+            Clockwork Melody Music Tempo
          Space planets possible  :
             Frogs (ALWAYS HAVE TO BE STOKERS OF THE FORGE)
          Void planets possible   :
             Silence Nothing Holes Caves
          Light planets possible  :
-            Colors Rainbows Rain 
+            Colors Rainbows Rain Future
          Mind planets possible   :
-            Flow Dreams Fears 
+            Flow Dreams Fears Thought
          Heart planets possible  :
-            Souls Refugees 
+            Souls Refugees Ghosts 
          Rage planets possible   :
-            Clowns Destruction Craziness 
+            Clowns Destruction Craziness Mirth
          Hope planets possible   :
             Angels Bells Fields Flowers
          Doom planets possible   :
@@ -107,7 +107,7 @@ public class LandMain {
          Life planets possible   :
             Forest Ferns Roses Monsters
          Blood planets possible  :
-            Pulse Wine 
+            Pulse Wine Haze 
          Breath planets possible :
             Shade Zephyr Breeze Storms
         */
@@ -159,7 +159,7 @@ public class LandMain {
                         PlrLand2C = "Rain";
                         break;
                     case 3:
-                        PlrLand2C = "";
+                        PlrLand2C = "Light";
                         break;
                 }
                 break;
@@ -175,7 +175,7 @@ public class LandMain {
                         PlrLand2C = "Fears";
                         break;
                     case 3:
-                        PlrLand2C = "";
+                        PlrLand2C = "Thought";
                         break;
                 }
                 break;
@@ -207,7 +207,7 @@ public class LandMain {
                         PlrLand2C = "Craziness";
                         break;
                     case 3:
-                        PlrLand2C = "";
+                        PlrLand2C = "Mirth";
                         break;
                 }
                 break;
@@ -262,13 +262,13 @@ public class LandMain {
             case "BLOOD":
                 switch(landRand){
                     case 0:
-                        PlrLand2C = "Pulse";
+                        PlrLand2C = "Haze";
                         break;
                     case 1:
                         PlrLand2C = "Wine";
                         break;
                     case 2:
-                        PlrLand2C = "";
+                        PlrLand2C = "Pulse";
                         break;
                     case 3:
                         PlrLand2C = "";
