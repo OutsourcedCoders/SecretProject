@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Jorge A. Flores-Morales
+ * Copyright (C) 2016 Jorge A. Flores-Morales, Andy Zheng
  *
  * This file is part of SecretProject
  *
