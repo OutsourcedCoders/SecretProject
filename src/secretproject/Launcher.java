@@ -56,6 +56,7 @@ public class Launcher {
                 secretproject.resources.Data.ClearScreen();
                 secretproject.player.PlayerCreation.RandomChar();
                 secretproject.player.PlayerCreation.classpectGen();
+                secretproject.lands.LandMain.landGen();
                 playerCreated = true;
             }else{
                 System.out.println("UNFINISHED.");

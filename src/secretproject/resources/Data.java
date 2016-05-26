@@ -45,13 +45,13 @@ public class Data {
     
     
     //player vars
-    public static String playerGenderC  = "NULL";
-    public static String playerHairC    = "NULL";
-    public static String playerClothesC = "NULL";
-    public static String playerClassC   = "NULL";
-    public static String playerAspectC  = "NULL";
-    public static String PlayerLand1C   = "NULL";
-    public static String PlayerLand2C   = "NULL";
+    public static String plrGenderC  = "NULL";
+    public static String plrHairC    = "NULL";
+    public static String plrClothesC = "NULL";
+    public static String plrClassC   = "NULL";
+    public static String plrAspectC  = "NULL";
+    public static String PlrLand1C   = "NULL";
+    public static String PlrLand2C   = "NULL";
     
     //quick vars
     public static int landRand = 0;

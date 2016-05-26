@@ -22,7 +22,7 @@ package secretproject.lands;
 import static secretproject.resources.Data.*;
 
 public class LandMain {
-    public void LandDesc(){
+    public static void LandDesc(){
         switch(genLand1){
             
         }
@@ -31,7 +31,7 @@ public class LandMain {
         }
     }
     
-    public void landGen(){
+    public static void landGen(){
         landRand = rnGsus.nextInt(4);
         /*
          Rogue planets possible  :
@@ -59,7 +59,7 @@ public class LandMain {
          Prince planets possible :
             
         */
-        switch(playerClassC.toUpperCase()){
+        switch(plrClassC.toUpperCase()){
             case "ROGUE":
                 break;
             case "THIEF":
@@ -111,186 +111,187 @@ public class LandMain {
          Breath planets possible :
             Shade Zephyr Breeze Storms
         */
-        switch(playerAspectC.toUpperCase()){
+        switch(plrAspectC.toUpperCase()){
             case "TIME":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Clockwork";
+                        PlrLand2C = "Clockwork";
                         break;
                     case 1:
-                        PlayerLand2C = "Melody";
+                        PlrLand2C = "Melody";
                         break;
                     case 2:
-                        PlayerLand2C = "Music";
+                        PlrLand2C = "Music";
                         break;
                     case 3:
-                        PlayerLand2C = "";
+                        PlrLand2C = "";
                         break;
                 }
                 break;
             case "SPACE":
-                PlayerLand2C = "Frogs";
+                PlrLand2C = "Frogs";
                 break;
             case "VOID":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Silence";
+                        PlrLand2C = "Silence";
                         break;
                     case 1:
-                        PlayerLand2C = "Nothing";
+                        PlrLand2C = "Nothing";
                         break;
                     case 2:
-                        PlayerLand2C = "Holes";
+                        PlrLand2C = "Holes";
                         break;
                     case 3:
-                        PlayerLand2C = "Caves";
+                        PlrLand2C = "Caves";
                         break;
                 }
                 break;
             case "LIGHT":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Colors";
+                        PlrLand2C = "Colors";
                         break;
                     case 1:
-                        PlayerLand2C = "Rainbows";
+                        PlrLand2C = "Rainbows";
                         break;
                     case 2:
-                        PlayerLand2C = "Rain";
+                        PlrLand2C = "Rain";
                         break;
                     case 3:
-                        PlayerLand2C = "";
+                        PlrLand2C = "";
                         break;
                 }
                 break;
             case "MIND":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Flow";
+                        PlrLand2C = "Flow";
                         break;
                     case 1:
-                        PlayerLand2C = "Dreams";
+                        PlrLand2C = "Dreams";
                         break;
                     case 2:
-                        PlayerLand2C = "Fears";
+                        PlrLand2C = "Fears";
                         break;
                     case 3:
-                        PlayerLand2C = "";
+                        PlrLand2C = "";
                         break;
                 }
                 break;
             case "HEART":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Souls";
+                        PlrLand2C = "Souls";
                         break;
                     case 1:
-                        PlayerLand2C = "Refugees";
+                        PlrLand2C = "Refugees";
                         break;
                     case 2:
-                        PlayerLand2C = "";
+                        PlrLand2C = "";
                         break;
                     case 3:
-                        PlayerLand2C = "";
+                        PlrLand2C = "";
                         break;
                 }
                 break;
             case "RAGE":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Clowns";
+                        PlrLand2C = "Clowns";
                         break;
                     case 1:
-                        PlayerLand2C = "Destruction";
+                        PlrLand2C = "Destruction";
                         break;
                     case 2:
-                        PlayerLand2C = "Craziness";
+                        PlrLand2C = "Craziness";
                         break;
                     case 3:
-                        PlayerLand2C = "";
+                        PlrLand2C = "";
                         break;
                 }
                 break;
             case "HOPE":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Angels";
+                        PlrLand2C = "Angels";
                         break;
                     case 1:
-                        PlayerLand2C = "Bells";
+                        PlrLand2C = "Bells";
                         break;
                     case 2:
-                        PlayerLand2C = "Flowers";
+                        PlrLand2C = "Flowers";
                         break;
                     case 3:
-                        PlayerLand2C = "Fields";
+                        PlrLand2C = "Fields";
                         break;
                 }
                 break;
             case "DOOM":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Death";
+                        PlrLand2C = "Death";
                         break;
                     case 1:
-                        PlayerLand2C = "Ruins";
+                        PlrLand2C = "Ruins";
                         break;
                     case 2:
-                        PlayerLand2C = "Shelters";
+                        PlrLand2C = "Shelters";
                         break;
                     case 3:
-                        PlayerLand2C = "Fires";
+                        PlrLand2C = "Fires";
                         break;
                 }
                 break;
             case "LIFE":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Forest";
+                        PlrLand2C = "Forest";
                         break;
                     case 1:
-                        PlayerLand2C = "Ferns";
+                        PlrLand2C = "Ferns";
                         break;
                     case 2:
-                        PlayerLand2C = "Roses";
+                        PlrLand2C = "Roses";
                         break;
                     case 3:
-                        PlayerLand2C = "Monsters";
+                        PlrLand2C = "Monsters";
                         break;
                 }
                 break;
             case "BLOOD":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Pulse";
+                        PlrLand2C = "Pulse";
                         break;
                     case 1:
-                        PlayerLand2C = "Wine";
+                        PlrLand2C = "Wine";
                         break;
                     case 2:
-                        PlayerLand2C = "";
+                        PlrLand2C = "";
                         break;
                     case 3:
-                        PlayerLand2C = "";
+                        PlrLand2C = "";
                         break;
                 }
                 break;
             case "BREATH":
                 switch(landRand){
                     case 0:
-                        PlayerLand2C = "Shade";
+                        PlrLand2C = "Shade";
                         break;
                     case 1:
-                        PlayerLand2C = "Zephyr";
+                        PlrLand2C = "Zephyr";
                         break;
                     case 2:
-                        PlayerLand2C = "Breeze";
+                        PlrLand2C = "Breeze";
                         break;
                     case 3:
-                        PlayerLand2C = "Storms";
+                        PlrLand2C = "Storms";
                         break;
                 }
                 break;
         }
+        System.out.println("LAND = Land of " + PlrLand1C + " and " + PlrLand2C);
     }
 }
