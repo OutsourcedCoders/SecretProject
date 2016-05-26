@@ -49,18 +49,19 @@ public class Data {
     
     public static int land1 = 0;
     public static int land2 = 0;
+    
     public static int playerGender;
     public static int playerHair;
     public static int playerClothes;
     public static int playerClass;
     public static int playerAspect;
     
+    
+    //clearscreen lovingly explained by people on the internet
     public static void ClearScreen(){
         try {
-            secretproject.resources.CLS.main();
-        } catch (IOException ex) {
-            Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InterruptedException ex) {
+            secretproject.resources.WindowsCommands.CLS();
+        } catch (IOException | InterruptedException ex) {
             Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

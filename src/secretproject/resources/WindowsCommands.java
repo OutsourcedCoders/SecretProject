@@ -21,8 +21,9 @@ package secretproject.resources;
 
 import java.io.IOException;
 
-public class CLS {
-    public static void main(String... arg) throws IOException, InterruptedException {
+public class WindowsCommands{
+    //clears screen
+    public static void CLS(String... arg) throws IOException, InterruptedException {
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
     }
 }
