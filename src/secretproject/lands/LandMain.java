@@ -23,10 +23,10 @@ import static secretproject.resources.Data.*;
 
 public class LandMain {
     public void LandDesc(){
-        switch(land1){
+        switch(genLand1){
             
         }
-        switch(land2){
+        switch(genLand2){
             
         }
     }
@@ -115,179 +115,179 @@ public class LandMain {
             case "TIME":
                 switch(landRand){
                     case 0:
-                        land2C = "Clockwork";
+                        PlayerLand2C = "Clockwork";
                         break;
                     case 1:
-                        land2C = "Melody";
+                        PlayerLand2C = "Melody";
                         break;
                     case 2:
-                        land2C = "Music";
+                        PlayerLand2C = "Music";
                         break;
                     case 3:
-                        land2C = "";
+                        PlayerLand2C = "";
                         break;
                 }
                 break;
             case "SPACE":
-                land2C = "Frogs";
+                PlayerLand2C = "Frogs";
                 break;
             case "VOID":
                 switch(landRand){
                     case 0:
-                        land2C = "Silence";
+                        PlayerLand2C = "Silence";
                         break;
                     case 1:
-                        land2C = "Nothing";
+                        PlayerLand2C = "Nothing";
                         break;
                     case 2:
-                        land2C = "Holes";
+                        PlayerLand2C = "Holes";
                         break;
                     case 3:
-                        land2C = "Caves";
+                        PlayerLand2C = "Caves";
                         break;
                 }
                 break;
             case "LIGHT":
                 switch(landRand){
                     case 0:
-                        land2C = "Colors";
+                        PlayerLand2C = "Colors";
                         break;
                     case 1:
-                        land2C = "Rainbows";
+                        PlayerLand2C = "Rainbows";
                         break;
                     case 2:
-                        land2C = "Rain";
+                        PlayerLand2C = "Rain";
                         break;
                     case 3:
-                        land2C = "";
+                        PlayerLand2C = "";
                         break;
                 }
                 break;
             case "MIND":
                 switch(landRand){
                     case 0:
-                        land2C = "Flow";
+                        PlayerLand2C = "Flow";
                         break;
                     case 1:
-                        land2C = "Dreams";
+                        PlayerLand2C = "Dreams";
                         break;
                     case 2:
-                        land2C = "Fears";
+                        PlayerLand2C = "Fears";
                         break;
                     case 3:
-                        land2C = "";
+                        PlayerLand2C = "";
                         break;
                 }
                 break;
             case "HEART":
                 switch(landRand){
                     case 0:
-                        land2C = "Souls";
+                        PlayerLand2C = "Souls";
                         break;
                     case 1:
-                        land2C = "Refugees";
+                        PlayerLand2C = "Refugees";
                         break;
                     case 2:
-                        land2C = "";
+                        PlayerLand2C = "";
                         break;
                     case 3:
-                        land2C = "";
+                        PlayerLand2C = "";
                         break;
                 }
                 break;
             case "RAGE":
                 switch(landRand){
                     case 0:
-                        land2C = "Clowns";
+                        PlayerLand2C = "Clowns";
                         break;
                     case 1:
-                        land2C = "Destruction";
+                        PlayerLand2C = "Destruction";
                         break;
                     case 2:
-                        land2C = "Craziness";
+                        PlayerLand2C = "Craziness";
                         break;
                     case 3:
-                        land2C = "";
+                        PlayerLand2C = "";
                         break;
                 }
                 break;
             case "HOPE":
                 switch(landRand){
                     case 0:
-                        land2C = "Angels";
+                        PlayerLand2C = "Angels";
                         break;
                     case 1:
-                        land2C = "Bells";
+                        PlayerLand2C = "Bells";
                         break;
                     case 2:
-                        land2C = "Flowers";
+                        PlayerLand2C = "Flowers";
                         break;
                     case 3:
-                        land2C = "Fields";
+                        PlayerLand2C = "Fields";
                         break;
                 }
                 break;
             case "DOOM":
                 switch(landRand){
                     case 0:
-                        land2C = "";
+                        PlayerLand2C = "Death";
                         break;
                     case 1:
-                        land2C = "";
+                        PlayerLand2C = "Ruins";
                         break;
                     case 2:
-                        land2C = "";
+                        PlayerLand2C = "Shelters";
                         break;
                     case 3:
-                        land2C = "";
+                        PlayerLand2C = "Fires";
                         break;
                 }
                 break;
             case "LIFE":
                 switch(landRand){
                     case 0:
-                        land2C = "";
+                        PlayerLand2C = "Forest";
                         break;
                     case 1:
-                        land2C = "";
+                        PlayerLand2C = "Ferns";
                         break;
                     case 2:
-                        land2C = "";
+                        PlayerLand2C = "Roses";
                         break;
                     case 3:
-                        land2C = "";
+                        PlayerLand2C = "Monsters";
                         break;
                 }
                 break;
             case "BLOOD":
                 switch(landRand){
                     case 0:
-                        land2C = "";
+                        PlayerLand2C = "Pulse";
                         break;
                     case 1:
-                        land2C = "";
+                        PlayerLand2C = "Wine";
                         break;
                     case 2:
-                        land2C = "";
+                        PlayerLand2C = "";
                         break;
                     case 3:
-                        land2C = "";
+                        PlayerLand2C = "";
                         break;
                 }
                 break;
             case "BREATH":
                 switch(landRand){
                     case 0:
-                        land2C = "";
+                        PlayerLand2C = "Shade";
                         break;
                     case 1:
-                        land2C = "";
+                        PlayerLand2C = "Zephyr";
                         break;
                     case 2:
-                        land2C = "";
+                        PlayerLand2C = "Breeze";
                         break;
                     case 3:
-                        land2C = "";
+                        PlayerLand2C = "Storms";
                         break;
                 }
                 break;

@@ -24,15 +24,15 @@ import static secretproject.resources.Data.*;
 public class PlayerCreation {
     public static void RandomChar(){
         playerGender = rnGsus.nextBoolean();
-        playerHair = rnGsus.nextInt(10);
-        playerClothes = rnGsus.nextInt(10);
+        genHair = rnGsus.nextInt(10);
+        genClothes = rnGsus.nextInt(10);
         if(!playerGender){
             playerGenderC = "male";
         }else{
             playerGenderC = "female";
         }
         
-        switch(playerHair){
+        switch(genHair){
             case 0:
                 playerHairC = "curly";
                 break;
@@ -65,7 +65,7 @@ public class PlayerCreation {
                 break;
         }
         if(!playerGender){
-            switch (playerClothes){
+            switch (genClothes){
                 case 0:
                     playerClothesC = "jeans with green t-shirt";
                     break;
@@ -98,7 +98,7 @@ public class PlayerCreation {
                     break;
             }
         }else{
-            switch (playerClothes){
+            switch (genClothes){
                 case 0:
                     playerClothesC = "green skirt with light green blouse";
                     break;
@@ -140,8 +140,8 @@ public class PlayerCreation {
     }
     
     public static void classpectGen(){
-        playerClass = rnGsus.nextInt(9);//returns number from 0-8
-        playerAspect = rnGsus.nextInt(12);//returnss number from 0-11
+        genClass = rnGsus.nextInt(9);//returns number from 0-8
+        genAspect = rnGsus.nextInt(12);//returnss number from 0-11
         /*
          Classes possible.
          Rogue  F M
@@ -158,7 +158,7 @@ public class PlayerCreation {
          Prince   M
          */
         if(!playerGender){
-            switch(playerClass){
+            switch(genClass){
                 case 0:
                     playerClassC = "Rogue";
                     break;
@@ -188,7 +188,7 @@ public class PlayerCreation {
                     break;
             }
         }else{
-            switch(playerClass){
+            switch(genClass){
                 case 0:
                     playerClassC = "Rogue";
                     break;
@@ -233,7 +233,7 @@ public class PlayerCreation {
         Blood
         Breath
         */
-        switch(playerAspect){
+        switch(genAspect){
             case 0:
                 playerAspectC = "Time";
                 break;

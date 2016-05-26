@@ -28,35 +28,41 @@ import java.util.logging.Logger;
 import secretproject.Launcher;
 
 public class Data {
+    //simple objects
     public static Scanner sc = new Scanner(System.in);
     public static Random rnGsus = new Random();
     public static DecimalFormat dc = new DecimalFormat();
     
+    //fuckton of bools
     public static boolean userAnswered = false;
     public static boolean randomChar = false;
     public static boolean playerCreated = false;
     public static boolean gameStarted = false;
     public static boolean playerGender;
     
+    //user shit
     public static String userInput;
-    public static String land1C = "NULL";
-    public static String land2C = "NULL";
     
+    
+    //player vars
     public static String playerGenderC  = "NULL";
     public static String playerHairC    = "NULL";
     public static String playerClothesC = "NULL";
     public static String playerClassC   = "NULL";
     public static String playerAspectC  = "NULL";
+    public static String PlayerLand1C   = "NULL";
+    public static String PlayerLand2C   = "NULL";
     
-    public static int land1 = 0;
-    public static int land2 = 0;
-    public static int landRand;
+    //quick vars
+    public static int landRand = 0;
     
-    public static int playerHair;
-    public static int playerClothes;
-    public static int playerClass;
-    public static int playerAspect;
-    
+    //generated vars
+    public static int genHair    = 0;
+    public static int genClothes = 0;
+    public static int genClass   = 0;
+    public static int genAspect  = 0;
+    public static int genLand1 = 0;
+    public static int genLand2 = 0;
     
     //clearscreen lovingly explained by people on the internet
     public static void ClearScreen(){
