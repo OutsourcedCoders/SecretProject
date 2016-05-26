@@ -30,7 +30,8 @@ public class LandMain {
             
         }
     }
-    public void landRandomize(){
+    
+    public void landGen(){
         /*
          Rogue planets possible  :
             

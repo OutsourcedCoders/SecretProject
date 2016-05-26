@@ -33,9 +33,10 @@ public class Data {
     public static DecimalFormat dc = new DecimalFormat();
     
     public static boolean userAnswered = false;
-    public static boolean gameEnded = false;
     public static boolean randomChar = false;
     public static boolean playerCreated = false;
+    public static boolean gameStarted = false;
+    public static boolean playerGender;
     
     public static String userInput;
     public static String land1C = "NULL";
@@ -50,7 +51,6 @@ public class Data {
     public static int land1 = 0;
     public static int land2 = 0;
     
-    public static int playerGender;
     public static int playerHair;
     public static int playerClothes;
     public static int playerClass;
