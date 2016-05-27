@@ -35,7 +35,7 @@ public class LandMain {
         landRand = rnGsus.nextInt(4);
         /*
          Rogue planets possible  :
-            
+            Treasure
          Thief planets possible  :
             
          Heir planets possible   :
