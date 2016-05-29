@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 Jorge A. Flores-Morales
+ * Copyright (C) 2016 Jorge A. Flores-Morales, Andy Zheng
  *
  * This file is part of SecretProject
  *
@@ -23,127 +23,125 @@ import static secretproject.resources.Data.*;
 
 public class PlayerCreation {
     public static void RandomChar(){
-        playerGender = rng.nextInt(1);
-        playerHair = rng.nextInt(9);
-        playerClothes = rng.nextInt(9);
-        switch(playerGender){
-            case 0:
-                playerGenderC = "Male";
-                break;
-            case 1:
-                playerGenderC = "Female";
-                break;
+        playerGender = rnGsus.nextBoolean();
+        genHair = rnGsus.nextInt(10);
+        genClothes = rnGsus.nextInt(10);
+        if(!playerGender){
+            plrGenderC = "male";
+        }else{
+            plrGenderC = "female";
         }
         
-        switch(playerHair){
+        switch(genHair){
             case 0:
-                playerHairC = "curly";
+                plrHairC = "curly";
                 break;
             case 1:
-                playerHairC = "straight down";
+                plrHairC = "straight down";
                 break;
             case 2:
-                playerHairC = "mohawk";
+                plrHairC = "mohawk";
                 break;
             case 3:
-                playerHairC = "bedhead";
+                plrHairC = "bedhead";
                 break;
             case 4:
-                playerHairC = "cropped";
+                plrHairC = "cropped";
                 break;
             case 5:
-                playerHairC = "millitary";
+                plrHairC = "millitary";
                 break;
             case 6:
-                playerHairC = "long";
+                plrHairC = "long";
                 break;
             case 7:
-                playerHairC = "short";
+                plrHairC = "short";
                 break;
             case 8:
-                playerHairC = "unsettled";
+                plrHairC = "unsettled";
                 break;
             case 9:
-                playerHairC = "standing up";
+                plrHairC = "bedhead";
                 break;
         }
-        if(playerGender == 1){
-            switch (playerClothes){
+        if(!playerGender){
+            switch (genClothes){
                 case 0:
-                    playerClothesC = "green skirt with light green blouse";
+                    plrClothesC = "jeans with green t-shirt";
                     break;
                 case 1:
-                    playerClothesC = "long red shirt with black leggings";
+                    plrClothesC = "zipped hoodie with jeans";
                     break;
                 case 2:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "SBurb shirt with jeans";
                     break;
                 case 3:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "white t-shirt with shorts";
                     break;
                 case 4:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "cargo pants with long sleeve shirt";
                     break;
                 case 5:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "leather trenchcoat";
                     break;
                 case 6:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "labcoat with pants";
                     break;
                 case 7:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "<placeholder>";
                     break;
                 case 8:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "<placeholder>";
                     break;
                 case 9:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "<placeholder>";
                     break;
             }
-        }else if (playerGender == 0){
-            switch (playerClothes){
+        }else{
+            switch (genClothes){
                 case 0:
-                    playerClothesC = "jeans with t-shirt";
+                    plrClothesC = "green skirt with light green blouse";
                     break;
                 case 1:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "long red skirt with black leggings";
                     break;
                 case 2:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "labcoat with leggings";
                     break;
                 case 3:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "ripped jeans with purple blouse";
                     break;
                 case 4:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "atom t-shirt with long skirt";
                     break;
                 case 5:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "purple skirt with jacket";
                     break;
                 case 6:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "SBurb shirt with jeans";
                     break;
                 case 7:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "";
                     break;
                 case 8:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "<placeholder>";
                     break;
                 case 9:
-                    playerClothesC = "<placeholder>";
+                    plrClothesC = "<placeholder>";
                     break;
             }
         }
+        
         System.out.println("RANDOM PLAYER generated.\n");
         System.out.println("RANDOM PLAYER loaded.\n");
-        System.out.println("Gender  = " + playerGenderC);
-        System.out.println("Hair    = " + playerHairC);
-        System.out.println("Clothes = " + playerClothesC);
+        System.out.println("Gender  = " + plrGenderC);
+        System.out.println("Hair    = " + plrHairC);
+        System.out.println("Clothes = " + plrClothesC);
     }
     
     public static void classpectGen(){
-        playerClass = rng.nextInt(8);
-        playerAspect = rng.nextInt(11);
+        genClass = rnGsus.nextInt(9);//returns number from 0-8
+        genAspect = rnGsus.nextInt(12);//returnss number from 0-11
         /*
          Classes possible.
          Rogue  F M
@@ -159,64 +157,64 @@ public class PlayerCreation {
          Bard     M
          Prince   M
          */
-        if(playerGender == 1){
-            switch(playerClass){
+        if(!playerGender){
+            switch(genClass){
                 case 0:
-                    playerClassC = "Rogue";
+                    plrClassC = "Rogue";
                     break;
                 case 1:
-                    playerClassC = "Thief";
+                    plrClassC = "Thief";
                     break;
                 case 2:
-                    playerClassC = "Heir";
+                    plrClassC = "Heir";
                     break;
                 case 3:
-                    playerClassC = "Maid";
+                    plrClassC = "Page";
                     break;
                 case 4:
-                    playerClassC = "Knight";
+                    plrClassC = "Knight";
                     break;
                 case 5:
-                    playerClassC = "Seer";
+                    plrClassC = "Seer";
                     break;
                 case 6:
-                    playerClassC = "Mage";
+                    plrClassC = "Mage";
                     break;
                 case 7:
-                    playerClassC = "Sylph";
+                    plrClassC = "Bard";
                     break;
                 case 8:
-                    playerClassC = "Witch";
+                    plrClassC = "Prince";
                     break;
             }
         }else{
-            switch(playerClass){
+            switch(genClass){
                 case 0:
-                    playerClassC = "Rogue";
+                    plrClassC = "Rogue";
                     break;
                 case 1:
-                    playerClassC = "Thief";
+                    plrClassC = "Thief";
                     break;
                 case 2:
-                    playerClassC = "Heir";
+                    plrClassC = "Heir";
                     break;
                 case 3:
-                    playerClassC = "Page";
+                    plrClassC = "Maid";
                     break;
                 case 4:
-                    playerClassC = "Knight";
+                    plrClassC = "Knight";
                     break;
                 case 5:
-                    playerClassC = "Seer";
+                    plrClassC = "Seer";
                     break;
                 case 6:
-                    playerClassC = "Mage";
+                    plrClassC = "Mage";
                     break;
                 case 7:
-                    playerClassC = "Bard";
+                    plrClassC = "Sylph";
                     break;
                 case 8:
-                    playerClassC = "Prince";
+                    plrClassC = "Witch";
                     break;
             }
         }
@@ -235,44 +233,44 @@ public class PlayerCreation {
         Blood
         Breath
         */
-        switch(playerAspect){
+        switch(genAspect){
             case 0:
-                playerAspectC = "Time";
+                plrAspectC = "Time";
                 break;
             case 1:
-                playerAspectC = "Space";
+                plrAspectC = "Space";
                 break;
             case 2:
-                playerAspectC = "Void";
+                plrAspectC = "Void";
                 break;
             case 3:
-                playerAspectC = "Light";
+                plrAspectC = "Light";
                 break;
             case 4:
-                playerAspectC = "Mind";
+                plrAspectC = "Mind";
                 break;
             case 5:
-                playerAspectC = "Heart";
+                plrAspectC = "Heart";
                 break;
             case 6:
-                playerAspectC = "Rage";
+                plrAspectC = "Rage";
                 break;
             case 7:
-                playerAspectC = "Hope";
+                plrAspectC = "Hope";
                 break;
             case 8:
-                playerAspectC = "Doom";
+                plrAspectC = "Doom";
                 break;
             case 9:
-                playerAspectC = "Life";
+                plrAspectC = "Life";
                 break;
             case 10:
-                playerAspectC = "Blood";
+                plrAspectC = "Blood";
                 break;
             case 11:
-                playerAspectC = "Breath";
+                plrAspectC = "Breath";
                 break;
         }
-        System.out.println("ROLE = " + playerClassC + " of " + playerAspectC);
+        System.out.println("ROLE = " + plrClassC + " of " + plrAspectC);
     }
 }

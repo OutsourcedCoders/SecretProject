@@ -31,43 +31,47 @@ public class Launcher {
 
         System.out.println("Press [ENTER] when ready.\n");
         System.out.print("> ");
-        while(!userAnswered){
+        while(!playerCreated){
             userInput = sc.nextLine();
-            switch(userInput.toUpperCase()){
-                case "YES":
-                    secretproject.resources.Data.ClearScreen();
-                    System.out.println("SBURB character creation is running.\n");
-                    break;
-                case "NO":
-                    System.out.println("PROGRAM TERMINATING.\n");
-                    return;
-            }
-            System.out.print("RANDOM or CUSTOM?\n> ");
-            userInput = sc.nextLine();
-            switch(userInput.toUpperCase()){
-                case "RANDOM":
-                    System.out.println("RANDOM GEN CHOSEN\n");
-                    randomChar = true;
-                    userAnswered = true;
-                    break;
-                case "CUSTOM":
-                    System.out.println("CUSTOM NOT FUNCTIONAL");
-                    break;
-                default:
-                    System.out.println("Choose \'RANDOM\' or");
-                    System.out.println("\'CUSTOM\'.");
+            System.out.println("PLAYER CREATION running.\n");
+            while(!userAnswered){
+                System.out.print("RANDOM or CUSTOM?\n> ");
+                userInput = sc.nextLine();
+                switch(userInput.toUpperCase()){
+                    case "RANDOM":
+                        System.out.println("RANDOM GEN CHOSEN\n");
+                        randomChar = true;
+                        userAnswered = true;
+                        break;
+                    case "CUSTOM":
+                        System.out.println("CUSTOM NOT FUNCTIONAL\n");
+                        //does not break.
+                    default:
+                        System.out.println("Choose \'RANDOM\' or");
+                        System.out.println("\'CUSTOM\'.");
+                        break;
+                }
             }
             if(randomChar){
                 secretproject.resources.Data.ClearScreen();
                 secretproject.player.PlayerCreation.RandomChar();
                 secretproject.player.PlayerCreation.classpectGen();
+                secretproject.lands.LandMain.landGen();
                 playerCreated = true;
             }else{
                 System.out.println("UNFINISHED.");
                 System.out.println("¯\\_(ツ)_/¯");
                 return;
-            } 
+            }
         }
-        System.out.println("Exit SBURB client.");
+        System.out.print("\nPress [ENTER] when ready.\n>");
+        sc.nextLine();
+        System.out.println("Game starting.\n");
+        gameStarted = true;
+        while(gameStarted){
+            System.out.println("You, " + /*playerName + */"");
+            gameStarted = false;
+        }
+        
     }
 }

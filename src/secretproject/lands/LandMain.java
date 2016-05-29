@@ -22,18 +22,20 @@ package secretproject.lands;
 import static secretproject.resources.Data.*;
 
 public class LandMain {
-    public void LandDesc(){
-        switch(land1){
+    public static void LandDesc(){
+        switch(genLand1){
             
         }
-        switch(land2){
+        switch(genLand2){
             
         }
     }
-    public void landRandomize(){
+    
+    public static void landGen(){
+        landRand = rnGsus.nextInt(4);
         /*
          Rogue planets possible  :
-            
+            Treasure
          Thief planets possible  :
             
          Heir planets possible   :
@@ -57,7 +59,7 @@ public class LandMain {
          Prince planets possible :
             
         */
-        switch(playerClassC.toUpperCase()){
+        switch(plrClassC.toUpperCase()){
             case "ROGUE":
                 break;
             case "THIEF":
@@ -85,19 +87,19 @@ public class LandMain {
         }
         /*
          Time planets possible   :
-            Clockwork Melody Music 
+            Clockwork Melody Music Tempo
          Space planets possible  :
             Frogs (ALWAYS HAVE TO BE STOKERS OF THE FORGE)
          Void planets possible   :
-            Silence Nothingness Holes Caves
+            Silence Nothing Holes Caves
          Light planets possible  :
-            Colors Rainbows Rain 
+            Colors Rainbows Rain Future
          Mind planets possible   :
-            Flow Dreams Fears 
+            Flow Dreams Fears Thought
          Heart planets possible  :
-            Souls Refugees 
+            Souls Refugees Ghosts 
          Rage planets possible   :
-            Clowns Destruction Craziness 
+            Clowns Destruction Craziness Mirth
          Hope planets possible   :
             Angels Bells Fields Flowers
          Doom planets possible   :
@@ -105,35 +107,191 @@ public class LandMain {
          Life planets possible   :
             Forest Ferns Roses Monsters
          Blood planets possible  :
-            Pulse Wine 
+            Pulse Wine Haze 
          Breath planets possible :
             Shade Zephyr Breeze Storms
         */
-        switch(playerAspectC.toUpperCase()){
+        switch(plrAspectC.toUpperCase()){
             case "TIME":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Clockwork";
+                        break;
+                    case 1:
+                        PlrLand2C = "Melody";
+                        break;
+                    case 2:
+                        PlrLand2C = "Music";
+                        break;
+                    case 3:
+                        PlrLand2C = "";
+                        break;
+                }
                 break;
             case "SPACE":
+                PlrLand2C = "Frogs";
                 break;
             case "VOID":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Silence";
+                        break;
+                    case 1:
+                        PlrLand2C = "Nothing";
+                        break;
+                    case 2:
+                        PlrLand2C = "Holes";
+                        break;
+                    case 3:
+                        PlrLand2C = "Caves";
+                        break;
+                }
                 break;
             case "LIGHT":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Colors";
+                        break;
+                    case 1:
+                        PlrLand2C = "Rainbows";
+                        break;
+                    case 2:
+                        PlrLand2C = "Rain";
+                        break;
+                    case 3:
+                        PlrLand2C = "Light";
+                        break;
+                }
                 break;
             case "MIND":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Flow";
+                        break;
+                    case 1:
+                        PlrLand2C = "Dreams";
+                        break;
+                    case 2:
+                        PlrLand2C = "Fears";
+                        break;
+                    case 3:
+                        PlrLand2C = "Thought";
+                        break;
+                }
                 break;
             case "HEART":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Souls";
+                        break;
+                    case 1:
+                        PlrLand2C = "Refugees";
+                        break;
+                    case 2:
+                        PlrLand2C = "";
+                        break;
+                    case 3:
+                        PlrLand2C = "";
+                        break;
+                }
                 break;
             case "RAGE":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Clowns";
+                        break;
+                    case 1:
+                        PlrLand2C = "Destruction";
+                        break;
+                    case 2:
+                        PlrLand2C = "Craziness";
+                        break;
+                    case 3:
+                        PlrLand2C = "Mirth";
+                        break;
+                }
                 break;
             case "HOPE":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Angels";
+                        break;
+                    case 1:
+                        PlrLand2C = "Bells";
+                        break;
+                    case 2:
+                        PlrLand2C = "Flowers";
+                        break;
+                    case 3:
+                        PlrLand2C = "Fields";
+                        break;
+                }
                 break;
             case "DOOM":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Death";
+                        break;
+                    case 1:
+                        PlrLand2C = "Ruins";
+                        break;
+                    case 2:
+                        PlrLand2C = "Shelters";
+                        break;
+                    case 3:
+                        PlrLand2C = "Fires";
+                        break;
+                }
                 break;
             case "LIFE":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Forest";
+                        break;
+                    case 1:
+                        PlrLand2C = "Ferns";
+                        break;
+                    case 2:
+                        PlrLand2C = "Roses";
+                        break;
+                    case 3:
+                        PlrLand2C = "Monsters";
+                        break;
+                }
                 break;
             case "BLOOD":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Haze";
+                        break;
+                    case 1:
+                        PlrLand2C = "Wine";
+                        break;
+                    case 2:
+                        PlrLand2C = "Pulse";
+                        break;
+                    case 3:
+                        PlrLand2C = "";
+                        break;
+                }
                 break;
             case "BREATH":
+                switch(landRand){
+                    case 0:
+                        PlrLand2C = "Shade";
+                        break;
+                    case 1:
+                        PlrLand2C = "Zephyr";
+                        break;
+                    case 2:
+                        PlrLand2C = "Breeze";
+                        break;
+                    case 3:
+                        PlrLand2C = "Storms";
+                        break;
+                }
                 break;
         }
+        System.out.println("LAND = Land of " + PlrLand1C + " and " + PlrLand2C);
     }
 }
