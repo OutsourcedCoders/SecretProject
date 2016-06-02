@@ -35,15 +35,15 @@ public class LandMain {
         landRand = rnGsus.nextInt(4);
         /*
          Rogue planets possible  :
-            Treasure
+            Pyramids
          Thief planets possible  :
-            
+            Maps
          Heir planets possible   :
-            
+            Effect based on aspect?
          Maid planets possible   :
-            
+            Element based on aspect?
          Page planets possible   :
-            
+            Mail? 
          Knight planets possible :
             
          Seer planets possible   :

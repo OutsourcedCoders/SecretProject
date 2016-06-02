@@ -43,7 +43,6 @@ public class Data {
     //user shit
     public static String userInput;
     
-    
     //player vars
     public static String plrGenderC  = "NULL";
     public static String plrHairC    = "NULL";
@@ -65,6 +64,10 @@ public class Data {
     public static int genLand2 = 0;
     
     //clearscreen lovingly explained by people on the internet
+
+    /**
+     * Simple command to clear screen on windows systems.
+     */
     public static void ClearScreen(){
         try {
             secretproject.resources.WindowsCommands.CLS();
