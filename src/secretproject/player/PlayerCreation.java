@@ -24,6 +24,7 @@ import static secretproject.resources.Data.*;
 public class PlayerCreation {
     public static void RandomChar(){
         playerGender = rnGsus.nextBoolean();
+        genName = rnGsus.nextInt(10);
         genHair = rnGsus.nextInt(10);
         genClothes = rnGsus.nextInt(10);
         if(!playerGender){
