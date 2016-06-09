@@ -34,7 +34,6 @@ public class Launcher {
         if(plrPswdC.contains(" ")){
             System.out.println("NO SPACES");
             System.out.println("GOODBYE");
-            return;
         }else{
             System.out.println("Password creation sucessful.");
             for(loginTries = 0; loginTries <= 5; loginTries++){
@@ -64,24 +63,6 @@ public class Launcher {
                 userInput = sc.nextLine();
                 switch(userInput.toUpperCase()){
                     case "CREATE CHARACTER":
-                        System.out.println("WARNING: YOUR NAME WILL BE ERASED.");
-                        System.out.print("CONTINUE? >");
-                        userInput = sc.next();
-                        switch(userInput.toUpperCase()){
-                            case "YES":
-                                userAnswered = true;
-                                break;
-                            case "NO":
-                                System.out.println("Returning to SBURB client menu...");
-                                break;
-                            default:
-                                secretproject.resources.Data.ClearScreen();
-                                System.out.println("\nERRx413");
-                                System.out.println("INVALID ANSWER");
-                                System.out.println("\nPlease contact SKIANET SYSTEMS at");
-                                System.out.println("(651)-612-314");
-                                System.out.println("\n SBURB client shutting down...");
-                        }
                         break;
                     case "QUIT":
                         secretproject.resources.Data.ClearScreen();
@@ -99,6 +80,16 @@ public class Launcher {
                     userInput = sc.nextLine();
                     switch (userInput.toUpperCase()) {
                         case "RANDOM":
+                            userInput = sc.nextLine();
+                            switch(userInput.toUpperCase()){
+                                case "YES":
+                                    break;
+                                case "NO":
+                                    break;
+                                default:
+                                    System.out.println("Not a valid option");
+                                    return;
+                            }
                             System.out.println("RANDOM GEN CHOSEN\n");
                             randomChar = true;
                             userAnswered = true;
