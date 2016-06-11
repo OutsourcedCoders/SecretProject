@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with SecretProject.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 package secretproject;
 
 import static secretproject.resources.Data.*;
@@ -25,53 +24,106 @@ public class Launcher {
 
     public static void main(String[] args) {
         secretproject.resources.Data.ClearScreen();
-        System.out.println("SBURB version 0.0.0.1\n");
-        System.out.println("SKIANET SYSTEMS INCORPORATED. ALL RIGHTS RESERVED.\n");
-        System.out.println("SBURB client is running.\n");
-
-        System.out.println("Press [ENTER] when ready.\n");
-        System.out.print("> ");
-        while(!playerCreated){
-            userInput = sc.nextLine();
-            System.out.println("PLAYER CREATION running.\n");
-            while(!userAnswered){
-                System.out.print("RANDOM or CUSTOM?\n> ");
-                userInput = sc.nextLine();
-                switch(userInput.toUpperCase()){
-                    case "RANDOM":
-                        System.out.println("RANDOM GEN CHOSEN\n");
-                        randomChar = true;
-                        userAnswered = true;
-                        break;
-                    case "CUSTOM":
-                        System.out.println("CUSTOM NOT FUNCTIONAL\n");
-                        //does not break.
-                    default:
-                        System.out.println("Choose \'RANDOM\' or");
-                        System.out.println("\'CUSTOM\'.");
-                        break;
+        System.out.print("Enter NAME.\n> ");
+        plrNameC = sc.nextLine();
+        System.out.println("NAME CREATION sucessful.");
+        int loginTries;
+        System.out.print("PASSWORD CREATION.\n> ");
+        plrPswdC = sc.nextLine();
+        secretproject.resources.Data.ClearScreen();
+        if(plrPswdC.contains(" ")){
+            System.out.println("NO SPACES");
+            System.out.println("GOODBYE");
+        }else{
+            System.out.println("Password creation sucessful.");
+            for(loginTries = 0; loginTries <= 5; loginTries++){
+                System.out.print("Enter your password.\n> ");
+                if(sc.nextLine().equals(plrPswdC)){
+                    secretproject.resources.Data.ClearScreen();
+                    System.out.println("Login sucessful.");
+                    break;
+                }else{
+                    secretproject.resources.Data.ClearScreen();
+                    System.out.println("Login unsucessful.");
+                    System.out.println("Try again.");
                 }
             }
-            if(randomChar){
+            secretproject.resources.Data.ClearScreen();
+            System.out.println("SBURB version 0.0.0.1\n");
+            System.out.println("SKIANET SYSTEMS INCORPORATED. ALL RIGHTS RESERVED.\n");
+            System.out.println("SBURB client is running.\n");
+            System.out.println("Press [ENTER] when ready.\n");
+            System.out.print("> ");
+            sc.nextLine();
+            userAnswered = false;
+            while(!userAnswered){
+                System.out.println("---MENU---");
+                System.out.println("\tCREATE CHARACTER.");
+                System.out.println("\tQUIT.");
+                userInput = sc.nextLine();
+                switch(userInput.toUpperCase()){
+                    case "CREATE CHARACTER":
+                        break;
+                    case "QUIT":
+                        secretproject.resources.Data.ClearScreen();
+                        System.out.print("\n SBURB client shutting down...");
+                        return;
+                }
+            }
+            userAnswered = false;
+            while(!playerCreated) {
                 secretproject.resources.Data.ClearScreen();
-                secretproject.player.PlayerCreation.RandomChar();
-                secretproject.player.PlayerCreation.classpectGen();
-                secretproject.lands.LandMain.landGen();
-                playerCreated = true;
-            }else{
-                System.out.println("UNFINISHED.");
-                System.out.println("¯\\_(ツ)_/¯");
-                return;
+                userInput = sc.nextLine();
+                System.out.println("PLAYER CREATION running.\n");
+                while (!userAnswered) {
+                    System.out.print("RANDOM or CUSTOM?\n> ");
+                    userInput = sc.nextLine();
+                    switch (userInput.toUpperCase()) {
+                        case "RANDOM":
+                            userInput = sc.nextLine();
+                            switch(userInput.toUpperCase()){
+                                case "YES":
+                                    break;
+                                case "NO":
+                                    break;
+                                default:
+                                    System.out.println("Not a valid option");
+                                    return;
+                            }
+                            System.out.println("RANDOM GEN CHOSEN\n");
+                            randomChar = true;
+                            userAnswered = true;
+                            break;
+                        case "CUSTOM":
+                            System.out.println("CUSTOM NOT FUNCTIONAL\n");
+                            //transition to default...
+                        default:
+                            System.out.println("Choose \'RANDOM\' or");
+                            System.out.println("\'CUSTOM\'.");
+                            break;
+                    }
+                }
+                userAnswered = false;
+                if(randomChar){
+                    secretproject.resources.Data.ClearScreen();
+                    secretproject.player.PlayerCreation.RandomChar();
+                    secretproject.player.PlayerCreation.classpectGen();
+                    secretproject.lands.LandMain.landGen();
+                    playerCreated = true;
+                }else{
+                    System.out.println("UNFINISHED.");
+                    System.out.println("¯\\_(ツ)_/¯");
+                    return;
+                }
+            }
+            System.out.print("\nPress [ENTER] when ready.\n>");
+            sc.nextLine();
+            System.out.println("Game starting.\n");
+            gameStarted = true;
+            while(gameStarted){
+                System.out.println("You, " + plrNameC + "");
+                gameStarted = false;
             }
         }
-        System.out.print("\nPress [ENTER] when ready.\n>");
-        sc.nextLine();
-        System.out.println("Game starting.\n");
-        gameStarted = true;
-        while(gameStarted){
-            System.out.println("You, " + /*playerName + */"");
-            gameStarted = false;
-        }
-        
     }
 }

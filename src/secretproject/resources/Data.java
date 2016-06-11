@@ -44,6 +44,8 @@ public class Data {
     public static String userInput;
     
     //player vars
+    public static String plrPswdC    = "NULL";
+    public static String plrNameC    = "NULL";
     public static String plrGenderC  = "NULL";
     public static String plrHairC    = "NULL";
     public static String plrClothesC = "NULL";
@@ -56,6 +58,7 @@ public class Data {
     public static int landRand = 0;
     
     //generated vars
+    public static int genName    = 0;
     public static int genHair    = 0;
     public static int genClothes = 0;
     public static int genClass   = 0;
