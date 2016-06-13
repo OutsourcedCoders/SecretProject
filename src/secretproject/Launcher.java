@@ -23,7 +23,7 @@ import static secretproject.resources.Data.*;
 public class Launcher {
 
     public static void main(String[] args) {
-        secretproject.resources.WindowsCommands.Writing();
+        secretproject.resources.WindowsCommands.DirectoryCreation();
         secretproject.resources.Data.ClearScreen();
         System.out.print("Enter NAME.\n> ");
         plrNameC = sc.nextLine();

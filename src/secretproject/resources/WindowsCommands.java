@@ -40,7 +40,16 @@ public class WindowsCommands{
             FileWrite.write("Test?");
             FileWrite.close();
         }catch(IOException e){
-            System.err.println("Failed to write to file!!!");
+            System.err.println("FILE CREATION FAILED!!!");
+        }
+    }
+    
+    public static void DirectoryCreation(){
+        boolean success = (new File("C:/ProgramData/SBURB_Beta")).mkdirs();
+        if (!success) {
+            System.err.println("FOLDER CREATION FAILED!!!");
+        }else{
+            Writing();
         }
     }
 }
