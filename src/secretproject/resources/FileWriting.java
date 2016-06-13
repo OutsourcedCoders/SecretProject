@@ -19,7 +19,54 @@
 
 package secretproject.resources;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+
 
 public class FileWriting {
+    public String outputText;
+    public String outputFile;
+    public String outputDir;
+    private boolean fileCreated;
     
+    public FileWriting(String inputFile){
+        outputFile = inputFile;
+    }
+    
+    public void WriteToFile(String inputText, String inputDir){
+        outputText = inputText;
+        outputDir  = inputDir;
+        try{
+            File GameData = new File("C:/ProgramData/SBURB_Beta/GameData.txt");
+            FileOutputStream Output = new FileOutputStream(GameData);
+            OutputStreamWriter WriterOut = new OutputStreamWriter(Output);
+            Writer FileWrite = new BufferedWriter(WriterOut);
+            FileWrite.write(outputText);
+            FileWrite.close();
+        }catch(IOException e){
+            DirectoryCreation();
+        }
+    }
+    
+    private void DirectoryCreation(){
+        if(outputDir.equalsIgnoreCase("NODIR")){
+            boolean folderCreated = (new File("C:/ProgramData/SBURB_Beta")).mkdirs();
+            if (!folderCreated) {
+            System.err.println("Folder creation failed.");
+            System.err.println("Check program priviledges.");
+            }
+        }else{
+            boolean folderCreated = (new File("C:/ProgramData/SBURB_Beta/" + outputDir)).mkdirs();
+            if (!folderCreated) {
+            System.err.println("Folder creation failed.");
+            System.err.println("Check program priviledges.");
+            }
+        }
+        
+        
+    }
 }

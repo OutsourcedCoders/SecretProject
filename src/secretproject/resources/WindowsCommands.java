@@ -19,37 +19,19 @@
 
 package secretproject.resources;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
 
 public class WindowsCommands{
     //clears screen
     public static void CLS(String... arg) throws IOException, InterruptedException {
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
     }
-    public static void Writing(){
-        try{
-            File GameData = new File("C:/ProgramData/SBURB_Beta/GameData.txt");
-            FileOutputStream Output = new FileOutputStream(GameData);
-            OutputStreamWriter WriterOut = new OutputStreamWriter(Output);
-            Writer FileWrite = new BufferedWriter(WriterOut);
-            FileWrite.write("Test?");
-            FileWrite.close();
-        }catch(IOException e){
-            System.err.println("FILE CREATION FAILED!!!");
-        }
-    }
     
     public static void DirectoryCreation(){
         boolean success = (new File("C:/ProgramData/SBURB_Beta")).mkdirs();
         if (!success) {
             System.err.println("FOLDER CREATION FAILED!!!");
-        }else{
-            Writing();
         }
     }
 }
