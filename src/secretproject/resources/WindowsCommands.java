@@ -19,7 +19,12 @@
 
 package secretproject.resources;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 
 public class WindowsCommands{
     //clears screen
@@ -28,9 +33,14 @@ public class WindowsCommands{
     }
     public static void Writing(){
         try{
-            
-        }catch(ioException e){
-            
+            File GameData = new File("C:/ProgramData/SBURB_Beta/GameData.txt");
+            FileOutputStream Output = new FileOutputStream(GameData);
+            OutputStreamWriter WriterOut = new OutputStreamWriter(Output);
+            Writer FileWrite = new BufferedWriter(WriterOut);
+            FileWrite.write("Test?");
+            FileWrite.close();
+        }catch(IOException e){
+            System.err.println("Failed to write to file!!!");
         }
     }
 }
