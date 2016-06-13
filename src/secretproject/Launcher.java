@@ -35,9 +35,9 @@ public class Launcher {
             System.out.println("NO SPACES");
             System.out.println("GOODBYE");
         }else{
-            System.out.println("Password creation sucessful.");
+            System.out.println("PASSWORD CREATION sucessful.");
             for(loginTries = 0; loginTries <= 5; loginTries++){
-                System.out.print("Enter your password.\n> ");
+                System.out.print("Enter your PASSWORD.\n> ");
                 if(sc.nextLine().equals(plrPswdC)){
                     secretproject.resources.Data.ClearScreen();
                     System.out.println("Login sucessful.");
