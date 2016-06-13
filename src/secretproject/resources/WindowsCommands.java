@@ -19,19 +19,25 @@
 
 package secretproject.resources;
 
-import java.io.File;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import secretproject.Launcher;
+
 
 public class WindowsCommands{
-    //clears screen
-    public static void CLS(String... arg) throws IOException, InterruptedException {
-        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+    
+    //s
+    public static void ClearScreen(){
+        try {
+            CLS();
+        } catch (IOException | InterruptedException ex) {
+            Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
-    public static void DirectoryCreation(){
-        boolean success = (new File("C:/ProgramData/SBURB_Beta")).mkdirs();
-        if (!success) {
-            System.err.println("FOLDER CREATION FAILED!!!");
-        }
+    //clears screen
+    private static void CLS(String... arg) throws IOException, InterruptedException {
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
     }
 }

@@ -19,13 +19,9 @@
 
 package secretproject.resources;
 
-import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
 import java.text.DecimalFormat;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import secretproject.Launcher;
 
 public class Data {
     //simple objects
@@ -68,14 +64,4 @@ public class Data {
     
     //clearscreen lovingly explained by people on the internet
 
-    /**
-     * Simple command to clear screen on windows systems.
-     */
-    public static void ClearScreen(){
-        try {
-            secretproject.resources.WindowsCommands.CLS();
-        } catch (IOException | InterruptedException ex) {
-            Logger.getLogger(Launcher.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
 }

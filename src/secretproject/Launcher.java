@@ -25,7 +25,7 @@ public class Launcher {
 
     public static void main(String[] args) {
         
-        secretproject.resources.Data.ClearScreen();
+        secretproject.resources.WindowsCommands.ClearScreen();
         
         FileWriting testFile = new FileWriting("water");
         testFile.WriteToFile("Did it work?", "resources");
@@ -36,7 +36,7 @@ public class Launcher {
         int loginTries;
         System.out.print("PASSWORD CREATION.\n> ");
         plrPswdC = sc.nextLine();
-        secretproject.resources.Data.ClearScreen();
+        secretproject.resources.WindowsCommands.ClearScreen();
         if(plrPswdC.contains(" ")){
             System.out.println("NO SPACES");
             System.out.println("GOODBYE");
@@ -45,16 +45,16 @@ public class Launcher {
             for(loginTries = 0; loginTries <= 5; loginTries++){
                 System.out.print("Enter your PASSWORD.\n> ");
                 if(sc.nextLine().equals(plrPswdC)){
-                    secretproject.resources.Data.ClearScreen();
+                    secretproject.resources.WindowsCommands.ClearScreen();
                     System.out.println("Login sucessful.");
                     break;
                 }else{
-                    secretproject.resources.Data.ClearScreen();
+                    secretproject.resources.WindowsCommands.ClearScreen();
                     System.out.println("Login unsucessful.");
                     System.out.println("Try again.");
                 }
             }
-            secretproject.resources.Data.ClearScreen();
+            secretproject.resources.WindowsCommands.ClearScreen();
             System.out.println("SBURB version 0.0.0.1\n");
             System.out.println("SKIANET SYSTEMS INCORPORATED. ALL RIGHTS RESERVED.\n");
             System.out.println("SBURB client is running.\n");
@@ -71,14 +71,14 @@ public class Launcher {
                     case "CREATE CHARACTER":
                         break;
                     case "QUIT":
-                        secretproject.resources.Data.ClearScreen();
+                        secretproject.resources.WindowsCommands.ClearScreen();
                         System.out.print("\n SBURB client shutting down...");
                         return;
                 }
             }
             userAnswered = false;
             while(!playerCreated) {
-                secretproject.resources.Data.ClearScreen();
+                secretproject.resources.WindowsCommands.ClearScreen();
                 userInput = sc.nextLine();
                 System.out.println("PLAYER CREATION running.\n");
                 while (!userAnswered) {
@@ -111,7 +111,7 @@ public class Launcher {
                 }
                 userAnswered = false;
                 if(randomChar){
-                    secretproject.resources.Data.ClearScreen();
+                    secretproject.resources.WindowsCommands.ClearScreen();
                     secretproject.player.PlayerCreation.RandomChar();
                     secretproject.player.PlayerCreation.classpectGen();
                     secretproject.lands.LandMain.landGen();
