@@ -32,6 +32,7 @@ public class FileWriting {
     public String outputFile;
     public String outputDir;
     private boolean fileCreated;
+    private boolean folderCreated;
     
     public FileWriting(String inputFile){
         outputFile = inputFile;
@@ -54,19 +55,13 @@ public class FileWriting {
     
     private void DirectoryCreation(){
         if(outputDir.equalsIgnoreCase("NODIR")){
-            boolean folderCreated = (new File("C:/ProgramData/SBURB_Beta")).mkdirs();
-            if (!folderCreated) {
-            System.err.println("Folder creation failed.");
-            System.err.println("Check program priviledges.");
-            }
+            folderCreated = (new File("C:/ProgramData/SBURB_Beta")).mkdirs();
         }else{
-            boolean folderCreated = (new File("C:/ProgramData/SBURB_Beta/" + outputDir)).mkdirs();
-            if (!folderCreated) {
+            folderCreated = (new File("C:/ProgramData/SBURB_Beta/" + outputDir)).mkdirs();
+        }
+        if (!folderCreated){
             System.err.println("Folder creation failed.");
             System.err.println("Check program priviledges.");
-            }
         }
-        
-        
     }
 }
