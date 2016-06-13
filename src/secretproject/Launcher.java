@@ -19,12 +19,17 @@
 package secretproject;
 
 import static secretproject.resources.Data.*;
+import secretproject.resources.FileWriting;
 
 public class Launcher {
 
     public static void main(String[] args) {
-        secretproject.resources.WindowsCommands.DirectoryCreation();
+        
         secretproject.resources.Data.ClearScreen();
+        
+        FileWriting testFile = new FileWriting("water");
+        testFile.WriteToFile("Did it work?", "resources");
+        
         System.out.print("Enter NAME.\n> ");
         plrNameC = sc.nextLine();
         System.out.println("NAME CREATION sucessful.");

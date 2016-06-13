@@ -28,9 +28,9 @@ import java.io.Writer;
 
 
 public class FileWriting {
-    public String outputText;
-    public String outputFile;
-    public String outputDir;
+    private String outputText;
+    private String outputFile;
+    private String outputDir;
     private boolean fileCreated;
     private boolean folderCreated;
     
@@ -41,15 +41,20 @@ public class FileWriting {
     public void WriteToFile(String inputText, String inputDir){
         outputText = inputText;
         outputDir  = inputDir;
-        try{
-            File GameData = new File("C:/ProgramData/SBURB_Beta/GameData.txt");
-            FileOutputStream Output = new FileOutputStream(GameData);
-            OutputStreamWriter WriterOut = new OutputStreamWriter(Output);
-            Writer FileWrite = new BufferedWriter(WriterOut);
-            FileWrite.write(outputText);
-            FileWrite.close();
-        }catch(IOException e){
-            DirectoryCreation();
+        while(!fileCreated){
+            try{
+                File GameData = new File("C:/ProgramData/SBURB_Beta/"
+                        + outputDir + "/"+ outputFile + ".txt");
+                FileOutputStream Output = new FileOutputStream(GameData);
+                OutputStreamWriter WriterOut = new OutputStreamWriter(Output);
+                Writer FileWrite = new BufferedWriter(WriterOut);
+                FileWrite.write(outputText);
+                FileWrite.close();
+                fileCreated = true;
+            }catch(IOException e){
+                fileCreated = false;
+                DirectoryCreation();
+            }
         }
     }
     
