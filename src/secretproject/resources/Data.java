@@ -62,6 +62,6 @@ public class Data {
     public static int genLand1 = 0;
     public static int genLand2 = 0;
     
-    //clearscreen lovingly explained by people on the internet
-
+    //save location (its too much work rewriting this all the time)
+    public static String saveLoc = "C:/ProgramData/SBURB_Beta/";
 }

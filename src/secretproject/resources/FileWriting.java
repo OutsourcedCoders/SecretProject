@@ -25,6 +25,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import static secretproject.resources.Data.saveLoc;
 
 
 public class FileWriting {
@@ -43,8 +44,7 @@ public class FileWriting {
         outputDir  = inputDir;
         while(!fileCreated){
             try{
-                File GameData = new File("C:/ProgramData/SBURB_Beta/"
-                        + outputDir + "/"+ outputFile + ".txt");
+                File GameData = new File(saveLoc + outputDir + "/"+ outputFile + ".txt");
                 FileOutputStream Output = new FileOutputStream(GameData);
                 OutputStreamWriter WriterOut = new OutputStreamWriter(Output);
                 Writer FileWrite = new BufferedWriter(WriterOut);
@@ -60,9 +60,9 @@ public class FileWriting {
     
     private void DirectoryCreation(){
         if(outputDir.equalsIgnoreCase("NODIR")){
-            folderCreated = (new File("C:/ProgramData/SBURB_Beta")).mkdirs();
+            folderCreated = (new File(saveLoc.substring(0, 26))).mkdirs();
         }else{
-            folderCreated = (new File("C:/ProgramData/SBURB_Beta/" + outputDir)).mkdirs();
+            folderCreated = (new File(saveLoc + "/" + outputDir)).mkdirs();
         }
         if (!folderCreated){
             System.err.println("Folder creation failed.");

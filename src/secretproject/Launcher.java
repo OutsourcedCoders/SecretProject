@@ -69,6 +69,7 @@ public class Launcher {
                 userInput = sc.nextLine();
                 switch(userInput.toUpperCase()){
                     case "CREATE CHARACTER":
+                        userAnswered = true;
                         break;
                     case "QUIT":
                         secretproject.resources.WindowsCommands.ClearScreen();
