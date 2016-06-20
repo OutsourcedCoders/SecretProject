@@ -26,15 +26,23 @@ import static secretproject.resources.Data.saveLoc;
  * @author Jorge
  */
 public class FileReading {
-    private String localDir;
+    private String fileDir;
+    private String fileName;
+    private String totalPath;
     public String outputText;
     
-    public FileReading(String inputDir){
-        localDir = inputDir;
+    public FileReading(String inputDir, String inputFileName){
+        fileDir = inputDir;
+        fileName = fileDir;
     }
     
     public void ReadFile() throws IOException{
-        BufferedReader br = new BufferedReader(new FileReader(saveLoc + localDir));
+        if(fileDir.equalsIgnoreCase("NULL")){
+            totalPath = saveLoc + fileDir + fileName + ".txt";
+        }else{
+            totalPath = saveLoc + fileName + ".txt";
+        }
+        BufferedReader br = new BufferedReader(new FileReader(totalPath));
         try{
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
@@ -47,6 +55,11 @@ public class FileReading {
         }finally{
             br.close();
         }
+    }
+    
+    public void ChangeDirectory(String inputDir){
+        fileDir = inputDir;
+        outputText = "NULL";
     }
     //PLZ IGNORE NEXT LINES...
     

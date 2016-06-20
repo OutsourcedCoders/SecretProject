@@ -35,8 +35,7 @@ public class FileWriting {
     private boolean fileCreated;
     private boolean folderCreated;
     
-    public FileWriting(String inputFile){
-        outputFile = inputFile;
+    public FileWriting(){
     }
     
     public void WriteToFile(String inputText, String inputDir){
@@ -60,13 +59,20 @@ public class FileWriting {
     
     private void DirectoryCreation(){
         if(outputDir.equalsIgnoreCase("NODIR")){
-            folderCreated = (new File(saveLoc.substring(0, 26))).mkdirs();
+            folderCreated = (new File(saveLoc)).mkdirs();
+            //not working for some reason D:
+            //just avoid using nodir for now...
         }else{
-            folderCreated = (new File(saveLoc + "/" + outputDir)).mkdirs();
+            folderCreated = (new File(saveLoc + outputDir)).mkdirs();
         }
         if (!folderCreated){
             System.err.println("Folder creation failed.");
             System.err.println("Check program priviledges.");
         }
+    }
+    
+    public void ChooseFile(String inputFile){
+        fileCreated = false;
+        outputFile = inputFile; 
     }
 }

@@ -27,11 +27,17 @@ public class Launcher {
         
         secretproject.resources.WindowsCommands.ClearScreen();
         
-        FileWriting testFile = new FileWriting("water");
-        testFile.WriteToFile("Did it work?", "resources");
+        FileWriting ezFileWrite = new FileWriting();
+        ezFileWrite.ChooseFile("water");
+        ezFileWrite.WriteToFile("Did it work?", "resources");
         
         System.out.print("Enter NAME.\n> ");
         plrNameC = sc.nextLine();
+        ezFileWrite.ChooseFile("name");
+        ezFileWrite.WriteToFile(plrNameC, "savedata");
+        //FileWriting name = new FileWriting("name");
+        //name.WriteToFile(plrNameC, "savedata");
+        
         System.out.println("NAME CREATION sucessful.");
         int loginTries;
         System.out.print("PASSWORD CREATION.\n> ");
@@ -41,6 +47,8 @@ public class Launcher {
             System.out.println("NO SPACES");
             System.out.println("GOODBYE");
         }else{
+            ezFileWrite.ChooseFile("password");
+            ezFileWrite.WriteToFile(plrPswdC, "savedata");
             System.out.println("PASSWORD CREATION sucessful.");
             for(loginTries = 0; loginTries <= 5; loginTries++){
                 System.out.print("Enter your PASSWORD.\n> ");
