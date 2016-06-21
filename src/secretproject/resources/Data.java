@@ -71,7 +71,8 @@ public class Data {
     //save location (its too much work rewriting this all the time)
     public static String saveLoc = "C:/ProgramData/SBURB_Beta/";
     
-    public static void ClearVars(){
-        
+    public static void ClearInputs(){
+        userAnswered = false;
+        userInput = "NULL";
     }
 }

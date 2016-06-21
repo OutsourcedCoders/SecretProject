@@ -31,13 +31,32 @@ public class NewRuntime {
         
         fr.ChangeDirectory("savedata");
         fr.ChangeFile("name");
-        fr.ReadFile();
-        savedataExists = !(fr.textExtracted.isEmpty());
+        //fr.ReadFile();
+        
+        savedataExists = !(fr.ReadFile().isEmpty());
         
         if(savedataExists){
             System.out.println("Would you like to load your account?");
             while(!userAnswered){
-                
+                System.out.print("> ");
+                userInput = sc.nextLine();
+                switch(userInput.toUpperCase()){
+                    case "Y":
+                    case "YES":
+                        userAnswered = true;
+                        plrNameC = fr.textExtracted;
+                        fr.ChangeFile("password");
+                        fr.ReadFile();
+                        plrPswdC = fr.textExtracted;
+                        System.out.println("Your player name was " + plrNameC);
+                        break;
+                    case "N":
+                    case "NO":
+                        userAnswered = true;
+                        break;
+                    default:
+                        System.out.println("Please choose yes/no or y/n.");
+                }
             }
         }
     }

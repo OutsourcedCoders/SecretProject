@@ -19,6 +19,7 @@
 
 package secretproject;
 
+import secretproject.resources.Data;
 import static secretproject.resources.Data.*;
 
 public class Launcher {
@@ -49,6 +50,7 @@ public class Launcher {
                     break;
             }
         }
+        Data.ClearInputs();
         System.out.println("Launching...");
         if(stable){
             secretproject.OldRuntime.OldMain();
