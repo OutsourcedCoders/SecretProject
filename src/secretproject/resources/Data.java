@@ -71,6 +71,11 @@ public class Data {
     //save location (its too much work rewriting this all the time)
     public static String saveLoc = "C:/ProgramData/SBURB_Beta/";
     
+    /**
+     * Just clears userAnswered and userInput.
+     * <p>
+     * userInput is set to NULL for reasons.
+     */
     public static void ClearInputs(){
         userAnswered = false;
         userInput = "NULL";

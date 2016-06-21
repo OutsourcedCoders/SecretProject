@@ -23,15 +23,11 @@ import static secretproject.resources.Data.*;
 
 public class NewRuntime {
     public static void NewMain(){
-        
-        
-        
         secretproject.screens.MainScreens.SburbPreAlpha();
         sc.nextLine();
         
         fr.ChangeDirectory("savedata");
         fr.ChangeFile("name");
-        //fr.ReadFile();
         
         savedataExists = !(fr.ReadFile().isEmpty());
         
@@ -58,6 +54,11 @@ public class NewRuntime {
                         System.out.println("Please choose yes/no or y/n.");
                 }
             }
+        }else{
+            
         }
+        secretproject.resources.Data.ClearInputs();
+        
+        secretproject.screens.MainScreens.StartMenu();
     }
 }

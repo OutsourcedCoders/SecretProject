@@ -19,6 +19,8 @@
 
 package secretproject.screens;
 
+import static secretproject.resources.Data.*;
+
 public class MainScreens {
     public static void SburbPreAlpha(){
         secretproject.resources.WindowsCommands.ClearScreen();
@@ -28,4 +30,26 @@ public class MainScreens {
         System.out.println("Press [ENTER] when ready.\n");
         System.out.print("> ");
     }
+    
+    public static void StartMenu(){
+        while(!userAnswered){
+            System.out.println("---MENU---");
+            System.out.println("1.\tCREATE CHARACTER.");
+            System.out.println("2.\tQUIT.");
+            userInput = sc.nextLine();
+            switch(userInput.toUpperCase()){
+                case "1":
+                case "CREATE CHARACTER":
+                    userAnswered = true;
+                    break;
+                case "2":
+                case "QUIT":
+                    secretproject.resources.WindowsCommands.ClearScreen();
+                    System.out.print("\n SBURB client shutting down...");
+                    return;
+            }
+        }
+    }
+    
+    
 }
