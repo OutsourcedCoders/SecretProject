@@ -29,32 +29,48 @@ import static secretproject.resources.Data.saveLoc;
 
 
 public class FileWriting {
-    private String outputText;
-    private String outputFile;
-    private String outputDir;
+    private String textWritten;
+    private String fileName;
+    private String fileDir;
     private String totalPath;
     private boolean fileCreated;
     private boolean folderCreated;
     private boolean folderFail;
+    private boolean devMode;
     
     public FileWriting(){
     }
     
-    public void WriteToFile(String inputText, String inputDir){
-        outputText = inputText;
-        outputDir  = inputDir;
+    /**
+     * A quick file writer that takes a string as an input, and a
+     * directory as an input to create a file with the text chosen.
+     * <p>
+     * Also uses a private class that creates a directory if there is no
+     * existing one. This private class also uses a simple boolean variable
+     * choosing whether or not error messages are printed named devMode.
+     * 
+     * @param newTextWritten Text that is inserted into file.
+     * @param newFileDir  Location of file. "/" are only required
+     * if it is a directory within a directory.
+     * <p>
+     * To find out more about devMode,
+     * @see ViewableErrors
+     */
+    public void WriteToFile(String newTextWritten, String newFileDir){
+        textWritten = newTextWritten;
+        fileDir  = newFileDir;
         while(!fileCreated){
             try{
-                if(outputDir.equalsIgnoreCase("ROOTDIR")){
-                    totalPath = saveLoc + outputFile + ".txt";
+                if(fileDir.equalsIgnoreCase("ROOTDIR")){
+                    totalPath = saveLoc + fileName + ".txt";
                 }else{
-                    totalPath = saveLoc + outputDir + "/" + outputFile + ".txt";
+                    totalPath = saveLoc + fileDir + "/" + fileName + ".txt";
                 }
                 File GameData = new File(totalPath);
                 FileOutputStream Output = new FileOutputStream(GameData);
                 OutputStreamWriter WriterOut = new OutputStreamWriter(Output);
                 Writer FileWrite = new BufferedWriter(WriterOut);
-                FileWrite.write(outputText);
+                FileWrite.write(textWritten);
                 FileWrite.close();
                 fileCreated = true;
             }catch(IOException e){
@@ -68,23 +84,51 @@ public class FileWriting {
     }
     
     private void DirectoryCreation(){
-        folderCreated = (new File(saveLoc + outputDir)).mkdirs();
+        folderCreated = (new File(saveLoc + fileDir)).mkdirs();
         if (!folderCreated){
             folderFail = true;
-            System.err.println("Folder creation failed.");
-            System.err.println("Check program priviledges.");
-            System.err.println("PS. It also might be dev error :P");
-            System.err.print("Press any key to quit.\n> ");
+            if(devMode){
+                System.err.println("Folder creation failed.");
+                System.err.println("Check program priviledges.");
+                System.err.println("PS. It also might be dev error :P");
+                System.err.print("Press any key to quit.\n> ");
+            }
+            
         }
     }
     
-    public void ChangeFileName(String inputFile){
+    /**
+     * An object function that is used to set the file name.
+     * <p>
+     * <b>Required for any file to be properly created.</b>
+     * 
+     * @param newFileName File name chosen for new file.
+     */
+    public void ChangeFileName(String newFileName){
         fileCreated = false;
         folderFail = false;
-        outputFile = inputFile; 
+        fileName = newFileName; 
     }
     
+    /**
+     * An object function that changes to a new directory, 
+     * specified by the user. 
+     * <p>
+     * <b>No "/" are required, unless choosing a directory within a directory.</b>
+     * 
+     * @param newDir
+     */
     public void ChangeDirectory(String newDir){
-        outputDir = newDir;
+        fileDir = newDir;
+    }
+    
+    /**
+     * Enables or disables developer mode, in which error messages are printed.
+     * 
+     * @param printErrors True means errors are printed. False means errors are 
+     * hidden.
+     */
+    public void ViewableErrors(boolean printErrors){
+        devMode = printErrors;
     }
 }
