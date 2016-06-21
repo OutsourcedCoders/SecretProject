@@ -32,8 +32,10 @@ public class FileWriting {
     private String outputText;
     private String outputFile;
     private String outputDir;
+    private String totalPath;
     private boolean fileCreated;
     private boolean folderCreated;
+    private boolean folderFail;
     
     public FileWriting(){
     }
@@ -43,7 +45,12 @@ public class FileWriting {
         outputDir  = inputDir;
         while(!fileCreated){
             try{
-                File GameData = new File(saveLoc + outputDir + "/"+ outputFile + ".txt");
+                if(outputDir.equalsIgnoreCase("ROOTDIR")){
+                    totalPath = saveLoc + outputFile + ".txt";
+                }else{
+                    totalPath = saveLoc + outputDir + "/" + outputFile + ".txt";
+                }
+                File GameData = new File(totalPath);
                 FileOutputStream Output = new FileOutputStream(GameData);
                 OutputStreamWriter WriterOut = new OutputStreamWriter(Output);
                 Writer FileWrite = new BufferedWriter(WriterOut);
@@ -53,26 +60,31 @@ public class FileWriting {
             }catch(IOException e){
                 fileCreated = false;
                 DirectoryCreation();
+                if(folderFail){
+                    break;
+                }
             }
         }
     }
     
     private void DirectoryCreation(){
-        if(outputDir.equalsIgnoreCase("NODIR")){
-            folderCreated = (new File(saveLoc)).mkdirs();
-            //not working for some reason D:
-            //just avoid using nodir for now...
-        }else{
-            folderCreated = (new File(saveLoc + outputDir)).mkdirs();
-        }
+        folderCreated = (new File(saveLoc + outputDir)).mkdirs();
         if (!folderCreated){
+            folderFail = true;
             System.err.println("Folder creation failed.");
             System.err.println("Check program priviledges.");
+            System.err.println("PS. It also might be dev error :P");
+            System.err.print("Press any key to quit.\n> ");
         }
     }
     
-    public void ChooseFile(String inputFile){
+    public void ChangeFileName(String inputFile){
         fileCreated = false;
+        folderFail = false;
         outputFile = inputFile; 
+    }
+    
+    public void ChangeDirectory(String newDir){
+        outputDir = newDir;
     }
 }

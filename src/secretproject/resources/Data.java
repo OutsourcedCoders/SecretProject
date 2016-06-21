@@ -29,14 +29,20 @@ public class Data {
     public static Random rnGsus = new Random();
     public static DecimalFormat dc = new DecimalFormat();
     
-    //fuckton of bools
+    //custom objects
+    public static FileWriting fw = new FileWriting();
+    public static FileReading fr = new FileReading();
+    
+    //status bools
     public static boolean userAnswered = false;
     public static boolean randomChar = false;
     public static boolean playerCreated = false;
     public static boolean gameStarted = false;
     public static boolean playerGender;
+    public static boolean stable = true;
+    public static boolean savedataExists; 
     
-    //user shit
+    //user input
     public static String userInput;
     
     //player vars
@@ -64,4 +70,8 @@ public class Data {
     
     //save location (its too much work rewriting this all the time)
     public static String saveLoc = "C:/ProgramData/SBURB_Beta/";
+    
+    public static void ClearVars(){
+        
+    }
 }

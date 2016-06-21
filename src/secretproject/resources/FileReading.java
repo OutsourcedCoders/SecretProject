@@ -24,45 +24,47 @@ import java.io.FileReader;
 import java.io.IOException;
 import static secretproject.resources.Data.saveLoc;
 
-/**
- *
- * @author Jorge
- */
 public class FileReading {
     private String fileDir;
     private String fileName;
     private String totalPath;
-    public String outputText;
+    private boolean fileRead;
+    public String textExtracted;
     
-    public FileReading(String inputDir, String inputFileName){
-        fileDir = inputDir;
-        fileName = fileDir;
+    public FileReading(){
     }
     
-    public void ReadFile() throws IOException{
-        if(fileDir.equalsIgnoreCase("NULL")){
-            totalPath = saveLoc + fileDir + fileName + ".txt";
-        }else{
-            totalPath = saveLoc + fileName + ".txt";
-        }
-        BufferedReader br = new BufferedReader(new FileReader(totalPath));
-        try{
-            StringBuilder sb = new StringBuilder();
-            String line = br.readLine();
-            while(line != null){
-                sb.append(line);
-                sb.append(System.lineSeparator());
-                line = br.readLine();
+    public void ReadFile(){
+        while(!fileRead){
+            if(fileDir.equalsIgnoreCase("ROOTDIR")){
+                totalPath = saveLoc + fileDir + fileName + ".txt";
+            }else{
+                totalPath = saveLoc + fileName + ".txt";
             }
-            outputText = sb.toString();
-        }finally{
-            br.close();
+            try(BufferedReader br = new BufferedReader(new FileReader(totalPath))) {
+                StringBuilder sb = new StringBuilder();
+                String line = br.readLine();
+                while(line != null){
+                    sb.append(line);
+                    sb.append(System.lineSeparator());
+                    line = br.readLine();
+                }
+                textExtracted = sb.toString();
+            }catch(IOException e){
+                fileRead = false;
+                System.err.println("File reading failed.");
+                System.err.println("File at " + totalPath + " might not exist.");
+            }
         }
     }
     
-    public void ChangeDirectory(String inputDir){
-        fileDir = inputDir;
-        outputText = "NULL";
+    public void ChangeDirectory(String newDir){
+        fileDir = newDir;
+        textExtracted = "NULL";
+    }
+    
+    public void ChangeFile(String newFileName){
+        fileName = newFileName;
     }
     //PLZ IGNORE NEXT LINES...
     
