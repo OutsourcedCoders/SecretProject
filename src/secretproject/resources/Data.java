@@ -40,7 +40,8 @@ public class Data {
     public static boolean gameStarted = false;
     public static boolean playerGender;
     public static boolean stable = true;
-    public static boolean savedataExists; 
+    public static boolean savedataExists;
+    public static boolean loadedData;
     
     //user input
     public static String userInput;

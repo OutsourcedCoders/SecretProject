@@ -40,6 +40,7 @@ public class NewRuntime {
                     case "Y":
                     case "YES":
                         userAnswered = true;
+                        loadedData = true;
                         plrNameC = fr.textExtracted;
                         fr.ChangeFile("password");
                         fr.ReadFile();
@@ -49,13 +50,22 @@ public class NewRuntime {
                     case "N":
                     case "NO":
                         userAnswered = true;
+                        loadedData = false;
                         break;
                     default:
                         System.out.println("Please choose yes/no or y/n.");
                 }
             }
         }else{
-            
+            loadedData = false;
+        }
+        secretproject.resources.Data.ClearInputs();
+        
+        if(!loadedData){
+            System.out.print("Choose a name.\n>");
+            userInput = sc.nextLine();
+            plrNameC = userInput;
+            System.out.println("Enter a password.");
         }
         secretproject.resources.Data.ClearInputs();
         
