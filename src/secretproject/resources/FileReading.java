@@ -88,7 +88,8 @@ public class FileReading {
      * Changes to new directory, specified by the user. No "/" are required,
      * unless choosing a directory within a directory.
      *
-     * @param newDir is required.
+     * @param newDir is required. If set to ROOTDIR, it will move to whatever
+     * the current root directory is set to.
      *
      */
     public void ChangeDirectory(String newDir){

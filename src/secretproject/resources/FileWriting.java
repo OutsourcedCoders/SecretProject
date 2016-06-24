@@ -50,15 +50,12 @@ public class FileWriting {
      * choosing whether or not error messages are printed named devMode.
      * 
      * @param newTextWritten Text that is inserted into file.
-     * @param newFileDir  Location of file. "/" are only required
-     * if it is a directory within a directory.
      * <p>
      * To find out more about devMode,
      * @see ViewableErrors
      */
-    public void WriteToFile(String newTextWritten, String newFileDir){
+    public void WriteToFile(String newTextWritten){
         textWritten = newTextWritten;
-        fileDir  = newFileDir;
         while(!fileCreated){
             try{
                 if(fileDir.equalsIgnoreCase("ROOTDIR")){

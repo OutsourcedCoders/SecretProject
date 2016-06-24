@@ -20,6 +20,7 @@
 package secretproject;
 
 import static secretproject.resources.Data.*;
+import static secretproject.resources.WindowsCommands.ClearScreen;
 
 public class NewRuntime {
     public static void NewMain(){
@@ -59,15 +60,26 @@ public class NewRuntime {
         }else{
             loadedData = false;
         }
-        secretproject.resources.Data.ClearInputs();
+        ClearInputs();
+        ClearOutputs();
+        ClearScreen();
         
         if(!loadedData){
             System.out.print("Choose a name.\n>");
             userInput = sc.nextLine();
             plrNameC = userInput;
+            fw.ChangeDirectory("savedata");
+            fw.ChangeFileName("name");
+            ClearInputs();
+            ClearOutputs();
+            ClearScreen();
             System.out.println("Enter a password.");
+            userInput = sc.nextLine();
+            plrPswdC = userInput;
+            fw.ChangeFileName("password");
         }
-        secretproject.resources.Data.ClearInputs();
+        
+        ClearInputs();
         
         secretproject.screens.MainScreens.StartMenu();
     }

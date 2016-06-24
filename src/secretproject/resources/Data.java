@@ -81,4 +81,11 @@ public class Data {
         userAnswered = false;
         userInput = "NULL";
     }
+    
+    public static void ClearOutputs(){
+        fw.ChangeDirectory("ROOTDIR");
+        fw.ChangeFileName("NULL");
+        fr.ChangeDirectory("ROOTDIR");
+        fr.ChangeFile("NULL");
+    }
 }
