@@ -70,17 +70,25 @@ public class NewRuntime {
             plrNameC = userInput;
             fw.ChangeDirectory("savedata");
             fw.ChangeFileName("name");
+            fw.WriteToFile(plrNameC);
+            
             ClearInputs();
-            ClearOutputs();
             ClearScreen();
+            
             System.out.println("Enter a password.");
             userInput = sc.nextLine();
             plrPswdC = userInput;
             fw.ChangeFileName("password");
+            fw.WriteToFile(plrPswdC);
         }
         
         ClearInputs();
+        ClearOutputs();
+        ClearScreen();
         
         secretproject.screens.MainScreens.StartMenu();
+        if(userAnswered){
+            
+        }
     }
 }

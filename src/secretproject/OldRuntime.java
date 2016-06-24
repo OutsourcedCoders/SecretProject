@@ -29,12 +29,14 @@ public class OldRuntime {
         
         FileWriting fw = new FileWriting();
         fw.ChangeFileName("water");
-        fw.WriteToFile("Did it work?", "resources");
+        fw.ChangeDirectory("resources");
+        fw.WriteToFile("Did it work?");
         
         System.out.print("Enter NAME.\n> ");
         plrNameC = sc.nextLine();
         fw.ChangeFileName("name");
-        fw.WriteToFile(plrNameC, "savedata");
+        fw.ChangeDirectory("savedata");
+        fw.WriteToFile(plrNameC);
         //FileWriting name = new FileWriting("name");
         //name.WriteToFile(plrNameC, "savedata");
         
@@ -48,7 +50,8 @@ public class OldRuntime {
             System.out.println("GOODBYE");
         }else{
             fw.ChangeFileName("password");
-            fw.WriteToFile(plrPswdC, "savedata");
+            fw.ChangeDirectory("savedata");
+            fw.WriteToFile(plrPswdC);
             System.out.println("PASSWORD CREATION sucessful.");
             for(loginTries = 0; loginTries <= 5; loginTries++){
                 System.out.print("Enter your PASSWORD.\n> ");
